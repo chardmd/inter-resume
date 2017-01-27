@@ -11,7 +11,7 @@ Location.$inject = ['$scope', '$window'];
 function Location($scope, $window) {
   var startAnimation = true;
 
-  $scope.$on('location', function (event, data) {
+  $scope.$on('location', function () {
     if (startAnimation === true) {
       angular.element('.location .pageLabel').addClass('animated fadeIn');
       angular.element('.location .pageLabel').text('Location');

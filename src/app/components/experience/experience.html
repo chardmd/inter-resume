@@ -49,11 +49,11 @@
                 <span class="title">1. richard@osx: ~ (zsh)</span>
             </div>
             <div id="main">
-                <div>Last login: <span>{{$ctrl.currentDate}}</span> on ttys000</div>
+                <div>Last login: <span>{{$ctrl.currentDate | date: 'EEE MMM dd HH:mm:ss'}}</span> on ttys000</div>
                 <div class="commandContainer">
                     <div>
                         <span class="default">
-                        [{{$ctrl.currentTime}}]<span class="fore">&nbsp;richard</span>:<span class="accent">~</span>:
+                        [{{$ctrl.currentDate | date: 'HH:mm:ss'}}]<span class="fore">&nbsp;richard</span>:<span class="accent">~</span>:
                         </span>
                         <typer words="['npm install -g work-experience']" start-trigger="$ctrl.startCommand" start-typing="true" repeat="false" class="typer" type-time="60" start-delay='1000' on-complete="$ctrl.displayCommand()"></typer>
                         <div class="command">

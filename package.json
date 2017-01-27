@@ -64,7 +64,8 @@
     "root": true,
     "env": {
       "browser": true,
-      "jasmine": true
+      "jasmine": true,
+      "jquery": true
     },
     "extends": [
       "xo-space"

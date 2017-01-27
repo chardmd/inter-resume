@@ -10,8 +10,7 @@
         "randomcolor": "^0.4.4",
         "fullpage.js": "^2.8.6",
         "animate.css": "^3.5.2",
-        "ammap": "^3.18.3",
-        "moment": "^2.17.1"
+        "ammap": "^3.18.3"
     },
     "overrides": {
         "bootstrap": {
@@ -49,11 +48,6 @@
             "dependencies": {
                 "jquery": "^3.1.1"
             }
-        },
-        "moment": {
-            "main": [
-                "./min/moment.min.js"
-            ]
         }
     }
 }

@@ -5,32 +5,28 @@ angular
       controller: Skills
     });
 
-Skills.$inject = ['$scope', '$timeout'];
+Skills.$inject = ['$scope'];
 
 /** @ngInject */
-function Skills($scope, $timeout) {
-  var vm = this;
-
-  var startAnimation = true;
+function Skills($scope) {
+  var _this = this;
 
   var animationTrigger = false;
 
-  var words = ['Javascript', 'Java', 'AngularJS', 'Bootstrap', 'NodeJS', 'Spring', 'MongoDB',
+  var words = ['Javascript', 'Java', 'jQuery', 'Bootstrap', 'NodeJS', 'Spring', 'MongoDB',
     'MySQL', 'PostgreSQL', 'Redis', 'AWS', 'Eclipse', 'Git', 'Github',
     'Jenkins', 'OSX', 'Bower', 'CSS', 'Express', 'Grunt',
-    'HTML5', 'jQuery', 'NPM', 'PM2', 'RequireJS', 'Yeoman'
+    'HTML5', 'AngularJS', 'NPM', 'PM2', 'RequireJS', 'Yeoman'
   ];
 
-  $scope.$on('skills', function (event, data) {
+  $scope.$on('skills', function () {
     angular.element('.skills .pageLabel').addClass('animated fadeIn');
     angular.element('#skillTag').text('Skilled in ');
 
-    if (startAnimation === true) {
-      if (animationTrigger === false) {
-        animationTrigger = true;
+    if (animationTrigger === false) {
+      animationTrigger = true;
 
-        vm.startIconAnimation(words);
-      }
+      _this.startIconAnimation(words);
     }
   });
 }
@@ -60,13 +56,13 @@ Skills.prototype = {
   startIconAnimation: function (words) {
     var _this = this;
 
-    setTimeout(function () {
+    window.setTimeout(function () {
       words = _this.shuffleArray(words);
 
       for (var i = 0; i < words.length; i++) {
         _this.loopAnimate(words, i);
       }
-    }, 1500);
+    }, 800);
   },
 
   loopAnimate: function (words, index) {
@@ -89,15 +85,12 @@ Skills.prototype = {
         // change the header text
     setTimeout(function () {
       angular.element('.skills .pageLabel').addClass('animated fadeOut');
-
-      setTimeout(function () {
-        angular.element('.skills .pageLabel').removeClass('fadeOut');
-        angular.element('.skills .pageLabel').text('Web Toolkit').addClass('fadeIn');
-      }, 500);
-
-            // stop the animation of the icons
-      startAnimation = false;
     }, 1000);
+
+    setTimeout(function () {
+      angular.element('.skills .pageLabel').removeClass('fadeOut');
+      angular.element('.skills .pageLabel').text('Web Toolkit').addClass('fadeIn');
+    }, 1100);
   },
 
   animateIcon: function (text) {
@@ -107,14 +100,14 @@ Skills.prototype = {
     var image = document.querySelector("img[alt='" + text + "']");
     angular.element(image).addClass('animated ' + randomShake);
 
-        // remove the shake animation
+    // remove the shake animation
     setTimeout(function () {
       var previousImage = document.querySelector("img[alt='" + text + "']");
       angular.element(previousImage).removeClass('animated ' + randomShake);
     }, 150);
 
-        // highlight grid item
     var gridItem = angular.element(image).parent();
+
     var random = randomColor({luminosity: 'light', count: 1});
     angular.element(gridItem).css('background-color', random);
   }

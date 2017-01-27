@@ -11,21 +11,20 @@ Homepage.$inject = ['$scope'];
 function Homepage($scope) {
   var _this = this;
 
-  _this.isBadgeHidden = true;
-
   $scope.$on('slideToHome', function (event, badge) {
     var isBadgeHidden = badge.isBadgeHidden;
     var nextIndex = badge.nextIndex;
 
-    angular.element('.bouncing-badge').fadeIn();
-    angular.element('.bouncing-badge').removeClass('hide');
+    var bouncingBadge = document.querySelector('.bouncing-badge > div');
+    var downArrow = document.querySelector('#downArrow');
 
-        // hide the badge
     if (isBadgeHidden === true) {
-      var downArrow = document.querySelector('#downArrow').classList;
-      downArrow.remove('animated');
-
-      angular.element('.bouncing-badge').fadeOut();
+      downArrow.classList.remove('animated');
+      bouncingBadge.classList.remove('fadeIn', 'hide');
+      bouncingBadge.classList.add('fadeOut', 'animated');
+    } else {
+      bouncingBadge.classList.remove('fadeOut', 'hide');
+      bouncingBadge.classList.add('fadeIn', 'animated');
     }
 
     _this.displaySpeechBubble(nextIndex);
@@ -46,33 +45,38 @@ Homepage.prototype = {
       contact: 5
     };
 
+    var floatingBadge = document.querySelector('.speech-bubble');
+    var title = document.querySelector('.speech-bubble h4');
+
+    floatingBadge.classList.remove('hide');
+
     switch (nextIndex) {
 
       case ANCHORS.skills:
 
-        $('.speech-bubble').removeClass('hide');
-        $('.speech-bubble h4').html('<br/>Here are some of the tools that I used on my projects.');
+        title.innerHTML = '<br/>Here are some of the tools that I used on my projects.';
 
         break;
 
       case ANCHORS.experience:
 
-        $('.speech-bubble').removeClass('hide');
-        $('.speech-bubble h4').text('Over 5+ years experience in developing web applications.');
+        title.innerHTML = 'Over 5+ years experience in developing web applications.';
 
         break;
 
       case ANCHORS.location:
 
-        $('.speech-bubble').removeClass('hide');
-        $('.speech-bubble h4').html('<br/>Currently based in Sydney, Australia.');
+        title.innerHTML = '<br/>Currently based in Sydney, Australia.';
+
+        break;
+
+      case ANCHORS.contact:
+
+        title.innerHTML = "<br/>Let's build awesome projects. Feel free to drop me a message.";
 
         break;
 
       default:
-
-        $('.speech-bubble').removeClass('hide');
-        $('.speech-bubble h4').html('If you want to build profitable and cost effective projects, feel free to drop me a message.');
 
     }
   }

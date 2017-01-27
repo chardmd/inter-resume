@@ -18,7 +18,7 @@ function Main($scope) {
     scrollingSpeed: 600,
     scrollOverflow: true,
     anchors: ["home", "skills", "experience", "location", "contact"],
-    afterLoad: function (anchorLink, index) {
+    afterLoad: function (anchorLink) {
                 // trigger events for the corresponding child scopes
       $scope.$broadcast(anchorLink);
     },
@@ -31,6 +31,7 @@ function Main($scope) {
 
       var badge = {
         isBadgeHidden: isBadgeHidden,
+        index: index,
         nextIndex: nextIndex
       };
 
@@ -40,6 +41,8 @@ function Main($scope) {
 
   $(document).ready(function () {
     $('#fullpage').fullpage(options);
+
+    $('.slidePage').removeClass('hide');
 
     $(document).on('click', '[data-menuanchor]', function () {
       $.fn.fullpage.moveTo(angular.element(this).attr('data-menuanchor'));

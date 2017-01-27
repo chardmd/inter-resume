@@ -5,19 +5,19 @@ angular
       controller: Experience
     });
 
+Experience.$inject = ['$scope'];
+
 /** @ngInject */
 function Experience($scope) {
   var _this = this;
 
   _this.startCommand = false;
 
-  _this.currentTime = _this.getCurrentTime();
-
-  _this.currentDate = _this.getCurrentDate();
+  _this.currentDate = new Date();
 
   var startAnimation = true;
 
-  $scope.$on('experience', function (event, data) {
+  $scope.$on('experience', function () {
     _this.setCommandFocus();
 
     if (startAnimation === true) {
@@ -35,26 +35,16 @@ function Experience($scope) {
 Experience.prototype = {
 
   displayCommand: function () {
-    setTimeout(function () {
+    window.setTimeout(function () {
       angular.element('.command').show();
     }, 1000);
-  },
-
-  getCurrentDate: function () {
-    var currentDate = new moment().format('DDD MMM DD HH:mm:ss');
-    return currentDate;
-  },
-
-  getCurrentTime: function () {
-    var currentTime = new moment().format('HH:mm:ss');
-    return currentTime;
   },
 
   setCommandFocus: function () {
         // set focus to terminal
     var currentCommand = angular.element('.command[contenteditable="true"]');
 
-    setTimeout(function () {
+    window.setTimeout(function () {
       currentCommand.focus();
     }, 0);
   }
