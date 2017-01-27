@@ -1,0 +1,262 @@
+/* app css stylesheet */
+
+
+/***===================COMMON======================***/
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+.navbar-nav {
+    float: right;
+    right: 50px;
+    position: absolute;
+}
+
+.navbar-inverse {
+    background-color: #1C2B36;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+    background-color: #00aabb;
+}
+
+.pageLabel {
+    font-size: 43px;
+    line-height: 40px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #000000;
+    top: 0;
+    left: 0;
+    padding-bottom: 20px;
+    height: 60px;
+}
+
+.section {
+    position: relative;
+}
+
+
+/***===================HOMEPAGE======================***/
+
+
+#headerwrap {
+    background: url('../img/header_bg.jpg') no-repeat center top;
+    text-align: center;
+    background-attachment: relative;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#headerwrap p {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 40px;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.homepage {
+    position: relative;
+}
+
+.homepage .typer {
+    width: 110px;
+    color: #f9ed89;
+}
+
+.homepage .network-name {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.homepage .absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.homepage .bounce {
+    color: #ffffff;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5%;
+    right: 48%;
+    opacity: 0.5;
+}
+
+.bouncing-badge {
+    position: absolute;
+    bottom: 5%;
+    right: 50px;
+    opacity: 0.8;
+    -webkit-animation: bounce 2s infinite ease-in-out;
+    -moz-animation: bounce 2s infinite ease-in-out;
+    width: 200px;
+    text-align: right;
+}
+
+.speech-bubble {
+    position: relative;
+    background: #00aabb;
+    margin: 2em 0;
+    text-align: center;
+    color: white;
+    text-shadow: 0 -.05em .1em rgba(0, 0, 0, .3);
+    height: 116px;
+}
+
+.speech-bubble h4 {
+    text-align: center;
+    top: 8%;
+    position: absolute;
+    margin: 0px 10px;
+    font-weight: bold;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 47%;
+    width: 0;
+    height: 0;
+    border: 22px solid transparent;
+    border-top-color: #00aabb;
+    border-bottom: 0;
+    border-right: 0;
+    margin-bottom: -22px;
+}
+
+@-webkit-keyframes bounce {
+    0%,
+    20%,
+    60%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-20px);
+    }
+    80% {
+        -webkit-transform: translateY(-10px);
+    }
+}
+
+@-moz-keyframes bounce {
+    0%,
+    20%,
+    60%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-20px);
+    }
+    80% {
+        -webkit-transform: translateY(-10px);
+    }
+}
+
+.typer__cursor {
+    -webkit-animation: blink 1s infinite;
+    -moz-animation: blink 1s infinite;
+    animation: blink 1s infinite;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/***===================SKILLS======================***/
+
+.skills .grid-item {
+    float: left;
+    width: 10%;
+    padding: 10px;
+}
+
+@media only screen and (min-width: 320px) {
+    .skills .grid-item {
+        width: 18%;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .skills .grid-item {
+        width: 15%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .skills .grid-item {
+        width: 10%;
+    }
+}
+
+
+/***===================EXPERIENCE======================***/
+
+
+/***===================LOCATION======================***/
+
+.location #map {
+    position: absolute;
+    width: 100%;
+    height: 78%;
+}
+
+.location a[title='Interactive JavaScript maps'] {
+    display: none !important;
+}
