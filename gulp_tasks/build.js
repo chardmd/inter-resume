@@ -28,6 +28,15 @@ function build() {
   const jsFilter = filter(conf.path.tmp('**/*.js'), {restore: true});
   const cssFilter = filter(conf.path.tmp('**/*.css'), {restore: true});
 
+  const cssNanoSettings = {
+    reduceIdents: {
+      keyframes: false
+    },
+    discardUnused: {
+      keyframes: false
+    }
+  };
+
   return gulp.src(conf.path.tmp('/index.html'))
     .pipe(inject(partialsInjectFile, partialsInjectOptions))
     .pipe(useref({}, lazypipe().pipe(sourcemaps.init, {loadMaps: true})))
@@ -37,7 +46,7 @@ function build() {
     .pipe(rev())
     .pipe(jsFilter.restore)
     .pipe(cssFilter)
-    .pipe(cssnano())
+    .pipe(cssnano(cssNanoSettings))
     .pipe(rev())
     .pipe(cssFilter.restore)
     .pipe(revReplace())
