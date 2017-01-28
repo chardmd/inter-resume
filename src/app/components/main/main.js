@@ -41,11 +41,6 @@ function Main($scope) {
 
   $(document).ready(function () {
     $('#fullpage').fullpage(options);
-
     $('.slidePage').removeClass('hide');
-
-    $(document).on('click', '[data-menuanchor]', function () {
-      $.fn.fullpage.moveTo(angular.element(this).attr('data-menuanchor'));
-    });
   });
 }
