@@ -7,6 +7,6 @@ module.exports = function () {
         conf.paths.dist
       ]
     },
-    open: true
+    open: false
   };
 };

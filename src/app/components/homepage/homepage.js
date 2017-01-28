@@ -15,16 +15,14 @@ function Homepage($scope) {
     var isBadgeHidden = badge.isBadgeHidden;
     var nextIndex = badge.nextIndex;
 
-    var bouncingBadge = document.querySelector('.bouncing-badge > div');
-    var downArrow = document.querySelector('#downArrow');
-
     if (isBadgeHidden === true) {
-      downArrow.classList.remove('animated');
-      bouncingBadge.classList.remove('fadeIn', 'hide');
-      bouncingBadge.classList.add('fadeOut', 'animated');
+      $('#downArrow').removeClass('animated');
+
+      document.querySelector('.bouncing-badge > div').classList.remove('animated', 'fadeIn');
+      document.querySelector('.bouncing-badge > div').classList.add('animated', 'fadeOut');
     } else {
-      bouncingBadge.classList.remove('fadeOut', 'hide');
-      bouncingBadge.classList.add('fadeIn', 'animated');
+      document.querySelector('.bouncing-badge > div').classList.remove('animated', 'fadeOut', 'hide');
+      document.querySelector('.bouncing-badge > div').classList.add('animated', 'fadeIn');
     }
 
     _this.displaySpeechBubble(nextIndex);

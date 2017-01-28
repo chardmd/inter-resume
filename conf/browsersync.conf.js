@@ -12,6 +12,6 @@ module.exports = function () {
       }
     },
     port: 4000,
-    open: true
+    open: false
   };
 };
