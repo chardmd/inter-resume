@@ -70,7 +70,7 @@ Homepage.prototype = {
 
       case ANCHORS.contact:
 
-        title.innerHTML = "Let's build cool and awesome projects! Feel free to drop me a message.";
+        title.innerHTML = "Let's build cool and exciting projects! Feel free to drop me a message.";
 
         break;
 
