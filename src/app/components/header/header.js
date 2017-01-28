@@ -37,7 +37,20 @@ function HeaderComponent() {
   ];
 
   function pressLink($event) {
-  	var currentLink = angular.element($event.currentTarget).attr('data-menuanchor');
-  	$.fn.fullpage.moveTo(currentLink);
+  	var currentElement = $event.currentTarget;
+
+  	removeActiveSelection(currentElement);
+
+  	// add active class
+  	angular.element(currentElement).addClass('active');
+
+  	var link = angular.element(currentElement).attr('data-menuanchor');
+
+  	$.fn.fullpage.moveTo(link);
+  }
+
+  function removeActiveSelection(currentElement) {
+  	var parentNav = angular.element(currentElement).parent();
+  	angular.element(parentNav).find('li').removeClass('active');
   }
 }

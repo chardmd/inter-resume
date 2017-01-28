@@ -15,7 +15,8 @@
     "overrides": {
         "bootstrap": {
             "main": [
-                "./dist/css/bootstrap.min.css"
+                "./dist/css/bootstrap.min.css",
+                "./dist/js/bootstrap.min.js"
             ]
         },
         "animate.css": {

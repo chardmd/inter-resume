@@ -16,7 +16,6 @@ function Main($scope) {
     paddingTop: '50px',
     css3: true,
     scrollingSpeed: 600,
-    scrollOverflow: true,
     anchors: ["home", "skills", "experience", "location", "contact"],
     afterLoad: function (anchorLink) {
                 // trigger events for the corresponding child scopes

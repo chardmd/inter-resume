@@ -12,16 +12,6 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
-.navbar-nav {
-    float: right;
-    right: 50px;
-    position: absolute;
-}
-
-.navbar-inverse {
-    background-color: #1C2B36;
-}
-
 .navbar-inverse .navbar-nav > li > a {
     font-weight: bold;
     color: #ffffff;
