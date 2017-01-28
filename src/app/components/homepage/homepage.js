@@ -58,7 +58,7 @@ Homepage.prototype = {
 
       case ANCHORS.experience:
 
-        title.innerHTML = 'Over 5+ years experience in developing web applications.';
+        title.innerHTML = 'Experience in developing enterprise and commercial software.';
 
         break;
 
@@ -70,7 +70,7 @@ Homepage.prototype = {
 
       case ANCHORS.contact:
 
-        title.innerHTML = "<br/>Let's build awesome projects. Feel free to drop me a message.";
+        title.innerHTML = "Let's build cool and awesome projects! Feel free to drop me a message.";
 
         break;
 
