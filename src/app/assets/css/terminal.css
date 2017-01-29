@@ -69,7 +69,7 @@
 }
 
 #main .fore {
-    color: #ff6c6b;
+    color: #f9ed89;
 }
 
 #main .accent {
@@ -96,9 +96,18 @@
     color: #00aabb;
 }
 
+.command .select {
+    color: #00ff12;
+}
+
 .command > div span {
-    width: 10px;
+    width: 15px;
     display: inline-block;
+    font-weight: bold;
+}
+
+.loading {
+    display: none;
 }
 
 .inner-light-top {

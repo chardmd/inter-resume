@@ -1,31 +1,7 @@
 <div class="experience">
-    <h1 class="pageLabel"></h1>
-    <!--     <div class="Wallop Wallop--rotate">
-        <div class="Wallop-item">
-            <h1>Software Engineer</h1>
-            <h3>Simulation Software and Technology Pte Ltd</h3>
-            <h4>June 2016 - February 2017, Singapore</h4>
-            <div class="desc">Worked on web/cyber intelligence project and data discovery solutions that empowers the law enforcement agencies to identify emerging public security threats, track suspects online, and gather information on illicit activities.</div>
-        </div>
-        <div class="Wallop-item">
-            <h1>Engineering Manager</h1>
-            <h3>SK Planet Global Pte Ltd</h3>
-            <h4>July 2014 - June 2016, Singapore</h4>
-            <div class="desc">Created and enhance multiple cloud based applications (coupon, admin, merchants) that are part the SKPlanet's Saas Platform. Re-engineered and implemented solutions that prepares the business for regional market expansion in South-East Asia.</div>
-        </div>
-        <div class="Wallop-item">
-            <h1>Full Stack Developer</h1>
-            <h3>Twist Resources Inc.</h3>
-            <h4>April 2011 - May 2014</h4>
-            <div class="desc">Developed various enterprise-level web applications in the field of E-commerce, Real-Estate, Printing, and Education. Built reusable widgets that empowers non-technical designers to assemble sophisticated websites.
-            </div>
-        </div>
-        <br />
-        <div class="navigation">
-            <a href="#" class="Wallop-buttonPrevious btn btn-default"><i class="fa fa-arrow-circle-o-left fa-4x"></i></a> &nbsp;
-            <a href="#" class="Wallop-buttonNext btn btn-default"><i class="fa fa-arrow-circle-o-right fa-4x"></i></a>
-        </div>
-    </div> -->
+   
+   <slide-title title="Work Experience" display="$ctrl.display"></slide-title>
+
     <div class="shellContainer">
         <div id="shell">
             <div id="upper">
@@ -49,19 +25,24 @@
                 <span class="title">1. richard@osx: ~ (zsh)</span>
             </div>
             <div id="main">
-                <div>Last login: <span>{{$ctrl.currentDate | date: 'EEE MMM dd HH:mm:ss'}}</span> on ttys000</div>
                 <div class="commandContainer">
+                    <div>Last login: <span>{{$ctrl.currentDate | date: 'EEE MMM dd HH:mm:ss'}}</span> on ttys000</div>
                     <div>
                         <span class="default">
                         [{{$ctrl.currentDate | date: 'HH:mm:ss'}}]<span class="fore">&nbsp;richard</span>:<span class="accent">~</span>:
                         </span>
-                        <typer words="['npm install -g work-experience']" start-trigger="$ctrl.startCommand" start-typing="true" repeat="false" class="typer" type-time="60" start-delay='1000' on-complete="$ctrl.displayCommand()"></typer>
+                        <typer words="['load work-experience --global']" start-trigger="$ctrl.startType" start-typing="true" repeat="false" type-time="60" start-delay='
+                        1000' on-complete="$ctrl.displayCommand()"></typer>
+                        
                         <div class="command">
-                            <div>[1] TwistResources</div>
-                            <div>[2] SK Planet Global Pte Ltd</div>
-                            <div>[3] Simulation Software Technology</div>
+                            <span>Run a task:</span>
+                             <div ng-repeat="exp in $ctrl.experienceList track by $index">
+                                <span>></span>{{exp.company}}
+                            </div>
+                            <div>
+                                <span>></span>All (Install all options)
+                            </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>

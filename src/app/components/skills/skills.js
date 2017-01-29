@@ -78,19 +78,19 @@ Skills.prototype = {
       if (index === words.length - 1) {
         _this.animateFinal();
       }
-    }, index * 70);
+    }, index * 80);
   },
 
   animateFinal: function () {
         // change the header text
     setTimeout(function () {
       angular.element('.skills .pageLabel').addClass('animated fadeOut');
-    }, 1000);
+    }, 500);
 
     setTimeout(function () {
       angular.element('.skills .pageLabel').removeClass('fadeOut');
       angular.element('.skills .pageLabel').text('Web Toolkit').addClass('fadeIn');
-    }, 1100);
+    }, 600);
   },
 
   animateIcon: function (text) {

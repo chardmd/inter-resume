@@ -15,10 +15,10 @@ function SlideTitle($scope, $element) {
 
   $ctrl.$onChanges = function (change) {
   	if (change.display.currentValue === true) {
-  		angular.element($element).find('h1').text($ctrl.title);
-  		angular.element($element).find('h1').addClass('animated fadeIn');
+  		$element.find('h1').text($ctrl.title);
+  		$element.find('h1').addClass('animated fadeIn');
   	} else {
-  		angular.element($element).find('h1').text("");
+  		$element.find('h1').text("");
   	}
   };
 }
