@@ -32,7 +32,7 @@ function HeaderComponent() {
     },
     {
       link: "contact",
-      label: "Contact Me"
+      label: "Contact"
     }
   ];
 
