@@ -9,15 +9,12 @@ Location.$inject = ['$scope', '$window'];
 
 /** @ngInject */
 function Location($scope, $window) {
-  var startAnimation = true;
+  var $ctrl = this;
+
+  $ctrl.display = false;
 
   $scope.$on('location', function () {
-    if (startAnimation === true) {
-      angular.element('.location .pageLabel').addClass('animated fadeIn');
-      angular.element('.location .pageLabel').text('Location');
-
-      startAnimation = false;
-    }
+    $ctrl.display = true;
   });
 
     // svg path for target icon
