@@ -73,16 +73,6 @@ function Skills($element, $scope, $http, $timeout) {
     return array;
   }
 
-  function startIconAnimation(words) {
-    $timeout(function () {
-      words = shuffleArray(words);
-
-      for (var i = 0; i < words.length; i++) {
-        loopAnimate(words, i);
-      }
-    }, 800);
-  }
-
   function loopAnimate(words, index) {
     $timeout(function () {
       var iconText = words[index];
