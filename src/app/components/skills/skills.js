@@ -5,19 +5,22 @@ angular
       controller: Skills
     });
 
-Skills.$inject = ['$scope'];
+Skills.$inject = ['$element', '$scope', '$http', '$timeout'];
 
 /** @ngInject */
-function Skills($scope) {
-  var _this = this;
+function Skills($element, $scope, $http, $timeout) {
+  var $ctrl = this;
 
-  var animationTrigger = false;
+  // controller variables
+  $ctrl.skillList = [];
 
   var words = ['Javascript', 'Java', 'jQuery', 'Bootstrap', 'NodeJS', 'Spring', 'MongoDB',
     'MySQL', 'PostgreSQL', 'Redis', 'AWS', 'Eclipse', 'Git', 'Github',
     'Jenkins', 'OSX', 'Bower', 'CSS', 'Express', 'Grunt',
     'HTML5', 'AngularJS', 'NPM', 'PM2', 'RequireJS', 'Yeoman'
   ];
+
+  var animationTrigger = false;
 
   $scope.$on('skills', function () {
     angular.element('.skills .pageLabel').addClass('animated fadeIn');
@@ -26,14 +29,31 @@ function Skills($scope) {
     if (animationTrigger === false) {
       animationTrigger = true;
 
-      _this.startIconAnimation(words);
+      startIconAnimation(words);
     }
   });
-}
 
-Skills.prototype = {
+  // init
+  fetchSkillList();
 
-  shuffleArray: function (array) {
+  function fetchSkillList() {
+    $http.get('app/components/skills/skills.json')
+      .then(function (response) {
+        $ctrl.skills = response.data;
+      });
+  }
+
+  function startIconAnimation(words) {
+    $timeout(function () {
+      words = shuffleArray(words);
+
+      for (var i = 0; i < words.length; i++) {
+        loopAnimate(words, i);
+      }
+    }, 800);
+  }
+
+  function shuffleArray(array) {
     var counter = array.length;
 
         // While there are elements in the array
@@ -51,65 +71,60 @@ Skills.prototype = {
     }
 
     return array;
-  },
+  }
 
-  startIconAnimation: function (words) {
-    var _this = this;
-
-    window.setTimeout(function () {
-      words = _this.shuffleArray(words);
+  function startIconAnimation(words) {
+    $timeout(function () {
+      words = shuffleArray(words);
 
       for (var i = 0; i < words.length; i++) {
-        _this.loopAnimate(words, i);
+        loopAnimate(words, i);
       }
     }, 800);
-  },
+  }
 
-  loopAnimate: function (words, index) {
-    var _this = this;
-
-    setTimeout(function () {
+  function loopAnimate(words, index) {
+    $timeout(function () {
       var iconText = words[index];
 
       document.querySelector('#skillTag').innerText = "Skilled in " + iconText;
 
-      _this.animateIcon(iconText);
+      animateIcon(iconText);
 
       if (index === words.length - 1) {
-        _this.animateFinal();
+        animateFinal();
       }
-    }, index * 80);
-  },
+    }, index * 100);
+  }
 
-  animateFinal: function () {
+  function animateFinal() {
         // change the header text
-    setTimeout(function () {
+    $timeout(function () {
       angular.element('.skills .pageLabel').addClass('animated fadeOut');
     }, 500);
 
-    setTimeout(function () {
+    $timeout(function () {
       angular.element('.skills .pageLabel').removeClass('fadeOut');
       angular.element('.skills .pageLabel').text('Web Toolkit').addClass('fadeIn');
     }, 600);
-  },
+  }
 
-  animateIcon: function (text) {
+  function animateIcon(text) {
     var shakeList = ['tada', 'jello', 'pulse', 'flash'];
 
     var randomShake = shakeList[Math.floor(Math.random() * shakeList.length)];
-    var image = document.querySelector("img[alt='" + text + "']");
+    var image = $element.find("img[alt='" + text + "']");
     angular.element(image).addClass('animated ' + randomShake);
 
     // remove the shake animation
-    setTimeout(function () {
-      var previousImage = document.querySelector("img[alt='" + text + "']");
+    $timeout(function () {
+      var previousImage = $element.find("img[alt='" + text + "']");
       angular.element(previousImage).removeClass('animated ' + randomShake);
     }, 150);
 
-    var gridItem = angular.element(image).parent();
+    var gridItem = image.parents('.grid-item');
 
     var random = randomColor({luminosity: 'light', count: 1});
     angular.element(gridItem).css('background-color', random);
   }
-
-};
+}
