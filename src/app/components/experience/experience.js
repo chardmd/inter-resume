@@ -55,8 +55,6 @@ function Experience($scope, $http, $element, $timeout) {
       var exp = $element.find('.command > div');
 
       for (var i = 0; i < exp.length; i++) {
-        var currentExp = exp[i];
-
         displayTask(exp, i);
       }
     }, 1000);
