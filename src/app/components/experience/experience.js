@@ -33,9 +33,8 @@ function Experience($scope, $http, $element, $timeout) {
     }
   });
 
-  $ctrl.$onInit = function () {
-    fetchExperienceList();
-  };
+  // init
+  fetchExperienceList();
 
   function fetchExperienceList() {
     $http.get('app/components/experience/experience.json')
@@ -58,17 +57,20 @@ function Experience($scope, $http, $element, $timeout) {
       for (var i = 0; i < exp.length; i++) {
         var currentExp = exp[i];
 
-        displayTask(currentExp, i);
+        displayTask(exp, i);
       }
     }, 1000);
   }
 
-  function displayTask(currentExp, index) {
+  function displayTask(exp, index) {
     $timeout(function () {
+      var currentExp = exp[index];
+      var maxIndex = exp.length - 1;
+
       $element.find('.command > div').removeClass('highlight');
       currentExp.classList.add('highlight');
 
-      if (index === 3) {
+      if (index === maxIndex) {
         selectOption(currentExp);
         createLogsInstall();
       }
