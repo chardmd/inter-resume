@@ -15,6 +15,7 @@ function Location($scope, $window) {
 
   $scope.$on('location', function () {
     $ctrl.display = true;
+    $scope.$apply();
   });
 
     // svg path for target icon

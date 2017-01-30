@@ -13,5 +13,6 @@ function Contact($scope) {
 
   $scope.$on('contact', function () {
     $ctrl.display = true;
+    $scope.$apply();
   });
 }
