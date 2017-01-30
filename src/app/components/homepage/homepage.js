@@ -52,25 +52,25 @@ Homepage.prototype = {
 
       case ANCHORS.skills:
 
-        title.innerHTML = '<br/>Here are some of the tools that I used on my projects.';
+        title.innerHTML = '<br/>Here are some of the tools that I used on my projects';
 
         break;
 
       case ANCHORS.experience:
 
-        title.innerHTML = 'Experience in developing enterprise and commercial software.';
+        title.innerHTML = 'Experience in developing enterprise and commercial software';
 
         break;
 
       case ANCHORS.location:
 
-        title.innerHTML = '<br/>Currently based in Sydney, Australia.';
+        title.innerHTML = '<br/>Currently based in Sydney, Australia';
 
         break;
 
       case ANCHORS.contact:
 
-        title.innerHTML = "Let's build cool and exciting projects! Feel free to drop me a message.";
+        title.innerHTML = "Let's build cool and exciting projects! Feel free to drop me a message";
 
         break;
 

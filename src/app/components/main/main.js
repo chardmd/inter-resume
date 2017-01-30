@@ -5,10 +5,10 @@ angular
       controller: Main
     });
 
-Main.$inject = ['$scope'];
+Main.$inject = ['$scope', '$element', '$document'];
 
 /** @ngInject */
-function Main($scope) {
+function Main($scope, $element, $document) {
   var options = {
     sectionsColor: ['#ffffff', '#ffffff', '#ffffff', '#ffffff'],
     menu: '#menu',
@@ -18,7 +18,7 @@ function Main($scope) {
     scrollingSpeed: 600,
     anchors: ["home", "skills", "experience", "location", "contact"],
     afterLoad: function (anchorLink) {
-                // trigger events for the corresponding child scopes
+      // trigger events for the corresponding child scopes
       $scope.$broadcast(anchorLink);
     },
     onLeave: function (index, nextIndex, direction) {
@@ -38,8 +38,8 @@ function Main($scope) {
     }
   };
 
-  $(document).ready(function () {
-    $('#fullpage').fullpage(options);
-    $('.slidePage').removeClass('hide');
+  $document.ready(function () {
+    $element.find('#fullpage').fullpage(options);
+    $element.find('.slidePage').removeClass('hide');
   });
 }
