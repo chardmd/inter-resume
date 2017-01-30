@@ -5,37 +5,38 @@ angular
       controller: Homepage
     });
 
-Homepage.$inject = ['$scope'];
+Homepage.$inject = ['$scope', '$document'];
 
 /** @ngInject */
-function Homepage($scope) {
-  var _this = this;
+function Homepage($scope, $document) {
+  var $ctrl = this;
+
+  // controller methods
+  $ctrl.moveDown = moveDown;
 
   $scope.$on('slideToHome', function (event, badge) {
     var isBadgeHidden = badge.isBadgeHidden;
     var nextIndex = badge.nextIndex;
 
-    if (isBadgeHidden === true) {
-      $('#downArrow').removeClass('animated');
+    var bouncingBadge = $document.find('.bouncing-badge');
 
-      document.querySelector('.bouncing-badge > div').classList.remove('animated', 'fadeIn');
-      document.querySelector('.bouncing-badge > div').classList.add('animated', 'fadeOut');
+    if (isBadgeHidden === true) {
+      $document.find('#downArrow').removeClass('animated');
+
+      bouncingBadge.fadeOut();
     } else {
-      document.querySelector('.bouncing-badge > div').classList.remove('animated', 'fadeOut', 'hide');
-      document.querySelector('.bouncing-badge > div').classList.add('animated', 'fadeIn');
+      bouncingBadge.removeClass('hide');
+      bouncingBadge.fadeIn();
     }
 
-    _this.displaySpeechBubble(nextIndex);
+    displaySpeechBubble(nextIndex);
   });
-}
 
-Homepage.prototype = {
-
-  moveDown: function () {
+  function moveDown() {
     $.fn.fullpage.moveSectionDown();
-  },
+  }
 
-  displaySpeechBubble: function (nextIndex) {
+  function displaySpeechBubble(nextIndex) {
     var ANCHORS = {
       skills: 2,
       experience: 3,
@@ -43,10 +44,10 @@ Homepage.prototype = {
       contact: 5
     };
 
-    var floatingBadge = document.querySelector('.speech-bubble');
-    var title = document.querySelector('.speech-bubble h4');
+    var floatingBadge = $document.find('.speech-bubble');
+    var title = floatingBadge.find('h4')[0];
 
-    floatingBadge.classList.remove('hide');
+    floatingBadge.removeClass('hide');
 
     switch (nextIndex) {
 
@@ -78,4 +79,4 @@ Homepage.prototype = {
 
     }
   }
-};
+}
