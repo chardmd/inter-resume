@@ -17,7 +17,7 @@ function Skills($element, $scope, $http, $timeout) {
   var words = ['Javascript', 'Java', 'jQuery', 'Bootstrap', 'NodeJS', 'Spring', 'MongoDB',
     'MySQL', 'PostgreSQL', 'Redis', 'AWS', 'Eclipse', 'Git', 'Github',
     'Jenkins', 'OSX', 'Bower', 'CSS', 'Express', 'Grunt',
-    'HTML5', 'AngularJS', 'NPM', 'PM2', 'RequireJS', 'Yeoman'
+    'HTML5', 'AngularJS', 'NPM', 'PM2', 'RequireJS', 'Yeoman', 'Gulp'
   ];
 
   var animationTrigger = false;

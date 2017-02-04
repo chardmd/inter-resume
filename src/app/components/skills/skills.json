@@ -128,5 +128,10 @@
       "name":"Yeoman",
       "img":"app/assets/img/skills/web_tools/yeoman.svg",
       "link":"http://yeoman.io/"
+   },
+   {
+      "name":"Gulp",
+      "img":"app/assets/img/skills/web_tools/gulp.svg",
+      "link":"http://gulpjs.com/"
    }
 ]
