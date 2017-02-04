@@ -1,0 +1,50 @@
+[
+	{
+		"type": "[connect] ",
+		"content": "192.168.1.231:8080"
+	},
+	{
+		"type": "[connect] ",
+		"content": "192.100.23.45:3000"
+	},
+	{
+		"type": "[connect] ",
+		"content": "11.123.99.45:555"
+	},
+	{
+		"type": "[download]",
+		"content": "chardmd.github.io/s2t/data/info"
+	},
+	{
+		"type": "[download]",
+		"content": "chardmd.github.io/skplanet/data/info"
+	},
+	{
+		"type": "[download]",
+		"content": "chardmd.github.io/twistresources/data/info"
+	},
+	{
+		"type": "[install] ",
+		"content": "chardmd.github.io/s2t/data/info"
+	},
+	{
+		"type": "[install] ",
+		"content": "::date of work::"
+	},
+	{
+		"type": "[install] ",
+		"content": "::company position::"
+	},
+	{
+		"type": "[validate]",
+		"content": "::roles and responsibilities::"
+	},
+	{
+		"type": "[validate]",
+		"content": "http://www.skplanet.com/eng/aboutus/skplanet_is.aspx"
+	},
+	{
+		"type": "[validate]",
+		"content": "http://www.twistresources.com"
+	}
+]

@@ -22,7 +22,6 @@ function Homepage($scope, $document) {
 
     if (isBadgeHidden === true) {
       $document.find('#downArrow').removeClass('animated');
-
       bouncingBadge.fadeOut();
     } else {
       bouncingBadge.removeClass('hide');

@@ -86,6 +86,12 @@
     overflow-y: auto;
     height: 89%;
     width: 99%;
+    cursor: pointer;
+}
+
+.commandContainer .type {
+    color: #15f17b;
+    margin-right: 5%;
 }
 
 .command {
@@ -97,7 +103,7 @@
 }
 
 .command .select {
-    color: #00ff12;
+    color: #15f17b;
 }
 
 .command > div span {

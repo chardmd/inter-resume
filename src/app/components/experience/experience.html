@@ -31,6 +31,7 @@
                         <span class="default">
                         [{{$ctrl.currentDate | date: 'HH:mm:ss'}}]<span class="fore">&nbsp;richard</span>:<span class="accent">~</span>:
                         </span>
+
                         <typer words="['load work-experience --global']" start-trigger="$ctrl.startType" start-typing="true" repeat="false" type-time="60" start-delay='
                         1000' on-complete="$ctrl.displayCommand()"></typer>
                         
@@ -43,6 +44,11 @@
                                 <span>></span>All (Install all options)
                             </div>
                         </div>
+                    <div id="info_message_allOption" class="fore hide">[All] option selected. Please wait..</div>
+                    <div class="logs"></div>
+                    <div id="info_message_download" class="fore hide">All data downloaded. Preparing to display work information.</div>
+                    <div id="info_message_clear" class="fore hide">Clearing command logs..</div>
+                    <div id="info_message_gap" class="hide">=====================================================================</div>
                 </div>
             </div>
         </div>

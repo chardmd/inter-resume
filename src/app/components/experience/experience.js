@@ -18,6 +18,7 @@ function Experience($scope, $http, $element, $timeout) {
   $ctrl.startType = false;
   $ctrl.currentDate = new Date();
   $ctrl.experienceList = [];
+  $ctrl.logs = [];
   $ctrl.display = false;
 
   $scope.$on('experience', function () {
@@ -34,12 +35,22 @@ function Experience($scope, $http, $element, $timeout) {
   });
 
   // init
-  fetchExperienceList();
+  $ctrl.$onInit = function () {
+    fetchExperienceList();
+    fetchLogList();
+  };
 
   function fetchExperienceList() {
     $http.get('app/components/experience/experience.json')
       .then(function (response) {
         $ctrl.experienceList = response.data;
+      });
+  }
+
+  function fetchLogList() {
+    $http.get('app/components/experience/logs.json')
+      .then(function (response) {
+        $ctrl.logs = response.data;
       });
   }
 
@@ -84,37 +95,67 @@ function Experience($scope, $http, $element, $timeout) {
 
   function createLogsInstall() {
     $timeout(function () {
-      var commandContainer = $element.find('.commandContainer');
-
-          // var desc = $ctrl.experienceList[index].description;
-          // console.log(desc);
-
-      var newDiv = document.createElement("div");
-      newDiv.innerText = "All - option selected. Please wait..";
-      angular.element(newDiv).appendTo(commandContainer);
-
+      $element.find('#info_message_allOption').removeClass('hide');
       downloadInfo();
-    }, 2000);
+    }, 1500);
   }
 
   function downloadInfo() {
     $timeout(function () {
-      for (var i = 0; i < 20; i++) {
+      var logLength = $ctrl.logs.length;
+      for (var i = 0; i < logLength; i++) {
         createDownloadInfo(i);
       }
-    }, 800);
+    }, 1000);
   }
 
   function createDownloadInfo(index) {
-    var commandContainer = $element.find('.commandContainer');
+    var logs = $element.find('.logs');
 
     $timeout(function () {
-      var newDiv = document.createElement("div");
-      newDiv.innerText = "Downloading..";
-      angular.element(newDiv).appendTo(commandContainer);
+      var type = $ctrl.logs[index].type;
+      var typeElem = "<span class='type'>" + type + "</span>";
 
+      var desc = $ctrl.logs[index].content;
+      var descElem = "<span>" + desc + "</span>";
+
+      var logsElem = typeElem + descElem;
+      var newDiv = document.createElement("div");
+      newDiv.innerHTML = logsElem;
+      angular.element(newDiv).appendTo(logs);
+
+      var maxIndex = $ctrl.logs.length - 1;
+      if (index === maxIndex) {
+        $timeout(function () {
+          $element.find('#info_message_download').removeClass('hide');
+          // set to view
+
+          var commandContainer = $element.find('.commandContainer');
+          commandContainer[0].scrollTop = commandContainer[0].scrollHeight;
+          displayInfoClear();
+        }, 500);
+      }
+    }, index * 300);
+  }
+
+  function displayInfoClear() {
+    $timeout(function () {
+      var commandContainer = $element.find('.commandContainer');
+
+      $element.find('#info_message_clear').removeClass('hide');
+      displayInfoGap();
       // set to view
       commandContainer[0].scrollTop = commandContainer[0].scrollHeight;
-    }, index * 200);
+    }, 500);
+  }
+
+  function displayInfoGap() {
+    $timeout(function () {
+      var commandContainer = $element.find('.commandContainer');
+
+      $element.find('#info_message_gap').removeClass('hide');
+      // set to view
+      commandContainer[0].scrollTop = commandContainer[0].scrollHeight;
+    }, 500);
   }
 }
