@@ -48,19 +48,20 @@
     float: left;
 }
 
+#buttons {
+    margin-left: 5px;
+}
+
 .red {
-    background: #f04341;
-    border: 1px solid darken(#f04341, 10%);
+    background: red;
 }
 
 .yellow {
-    background: #f5b868;
-    border: 1px solid darken(#f5b868, 10%);
+    background: yellow;
 }
 
 .green {
-    background: #96cf7d;
-    border: 1px solid darken(#96cf7d, 10%);
+    background: green;
 }
 
 #main {
@@ -74,10 +75,6 @@
 
 #main .accent {
     color: #00b5c3;
-}
-
-#main .command:focus {
-    outline: 0px solid transparent;
 }
 
 #main .commandContainer {
@@ -114,49 +111,4 @@
 
 .loading {
     display: none;
-}
-
-.inner-light-top {
-    position: relative;
-    z-index: 2;
-    margin: 0px 3px;
-    height: 10px;
-    width: 10px;
-    border-radius: 100%;
-    background: rgba(255, 255, 255, .5);
-    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
-    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
-}
-
-.inner-light-bottom {
-    margin: -1px 3px;
-    height: 10px;
-    width: 10px;
-    border-radius: 100%;
-    background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, .1));
-    background-image: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, .1));
-}
-
-.inner-dark-top {
-    top: -10px;
-    height: 8px;
-    width: 10px;
-    border-radius: 100%;
-    position: relative;
-    z-index: 1;
-}
-
-.red .inner-dark-top {
-    background: darken(rgba(#f04341, .4), 10%);
-    margin: -5px 0px;
-}
-
-.yellow .inner-dark-top {
-    background: darken(rgba(#f5b868, .4), 10%);
-    margin: 3px 0px;
-}
-
-.green .inner-dark-top {
-    background: darken(rgba(#96cf7d, .4), 10%);
-    margin: 3px 0px;
 }

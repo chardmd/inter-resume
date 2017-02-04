@@ -20,7 +20,7 @@ function HeaderComponent() {
     },
     {
       link: "skills",
-      label: "Skills"
+      label: "Web Toolkit"
     },
     		{
       link: "experience",

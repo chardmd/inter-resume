@@ -129,7 +129,7 @@ function Location($scope, $window) {
       rollOverColor: "#585869",
       selectedColor: "#585869",
       pauseDuration: 0.2,
-      animationDuration: 2.5,
+      animationDuration: 3.5,
       adjustAnimationSpeed: true
     },
 
