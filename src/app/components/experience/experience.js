@@ -154,6 +154,19 @@ function Experience($scope, $http, $element, $timeout) {
       var commandContainer = $element.find('.commandContainer');
 
       $element.find('#info_message_gap').removeClass('hide');
+
+      displayWorkExperience();
+
+      // set to view
+      commandContainer[0].scrollTop = commandContainer[0].scrollHeight;
+    }, 500);
+  }
+
+  function displayWorkExperience() {
+    $timeout(function () {
+      var commandContainer = $element.find('.commandContainer');
+
+      $element.find('.info_message_work').removeClass('hide');
       // set to view
       commandContainer[0].scrollTop = commandContainer[0].scrollHeight;
     }, 500);

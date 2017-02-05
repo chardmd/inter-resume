@@ -37,6 +37,21 @@
                     <div id="info_message_download" class="fore hide">All data downloaded. Preparing to display work information.</div>
                     <div id="info_message_clear" class="fore hide">Clearing command logs..</div>
                     <div id="info_message_gap" class="hide">=====================================================================</div>
+                    <div class="info_message_work hide" ng-repeat="exp in $ctrl.experienceList track by $index">
+                        <div>
+                            <span>Company:</span>&nbsp;<span>{{exp.company}}</span>
+                        </div>
+                        <div>
+                            <span>Position:</span>&nbsp;<span>{{exp.position}}</span>
+                        </div>
+                        <div>
+                            <span>Work Duration:</span>&nbsp;<span>{{exp.work_duration}}</span>
+                        </div>
+                        <div>
+                            <span>Duties:</span>&nbsp;<span>{{exp.description}}</span>
+                        </div>
+                        <br />
+                    </div>
                 </div>
             </div>
         </div>
