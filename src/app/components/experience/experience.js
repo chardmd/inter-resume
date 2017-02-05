@@ -32,6 +32,10 @@ function Experience($scope, $http, $element, $timeout) {
       $ctrl.startType = true;
       $scope.$apply();
     }
+
+    // set to view
+    var commandContainer = $element.find('.commandContainer');
+    commandContainer[0].scrollTop = commandContainer[0].scrollHeight;
   });
 
   // init
