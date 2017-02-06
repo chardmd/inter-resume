@@ -138,12 +138,11 @@ function Location($scope, $window, $timeout, $element) {
 
   $scope.$on('location', function () {
     $ctrl.display = true;
+    $scope.$apply();
 
     if ($window.mapLocation === undefined) {
       $window.mapLocation = AmCharts.makeChart("map", mapSettings);
       $element.find('#map').fadeIn(500);
     }
-
-    $scope.$apply();
   });
 }

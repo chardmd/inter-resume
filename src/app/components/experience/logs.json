@@ -1,14 +1,14 @@
 [
 	{
-		"type": "[connect] ",
+		"type": "[connect]",
 		"content": "192.168.1.231:8080"
 	},
 	{
-		"type": "[connect] ",
+		"type": "[connect]",
 		"content": "192.100.23.45:3000"
 	},
 	{
-		"type": "[connect] ",
+		"type": "[connect]",
 		"content": "11.123.99.45:555"
 	},
 	{
@@ -24,15 +24,15 @@
 		"content": "chardmd.github.io/twistresources/data/info"
 	},
 	{
-		"type": "[install] ",
+		"type": "[install]",
 		"content": "::date of work::"
 	},
 	{
-		"type": "[install] ",
+		"type": "[install]",
 		"content": "::company position::"
 	},
 	{
-		"type": "[install] ",
+		"type": "[install]",
 		"content": "::roles and responsibilities::"
 	},
 		{
