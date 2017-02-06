@@ -52,7 +52,7 @@ function Skills($element, $scope, $http, $timeout) {
       for (var i = 0; i < words.length; i++) {
         loopAnimate(words, i);
       }
-    }, 800);
+    }, 1200);
   }
 
   function shuffleArray(array) {

@@ -68,7 +68,7 @@ function Location($scope, $window, $timeout, $element) {
       }],
       images: [{
         svgPath: targetSVG,
-        label: "Clark,",
+        label: "Clark,PH",
         latitude: 15.4828,
         longitude: 120.7120,
         color: layoutColors.successLight
@@ -138,7 +138,6 @@ function Location($scope, $window, $timeout, $element) {
 
   $scope.$on('location', function () {
     $ctrl.display = true;
-    $scope.$apply();
 
     if ($window.mapLocation === undefined) {
       $window.mapLocation = AmCharts.makeChart("map", mapSettings);

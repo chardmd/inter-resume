@@ -30,7 +30,6 @@ function Experience($scope, $http, $element, $timeout) {
       $ctrl.display = true;
 
       $ctrl.startType = true;
-      $scope.$apply();
     }
 
     // set to view

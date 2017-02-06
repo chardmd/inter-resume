@@ -15,7 +15,8 @@ function Main($scope, $element, $document) {
     fixedElements: '.bouncing-badge',
     paddingTop: '50px',
     css3: true,
-    scrollingSpeed: 600,
+    scrollingSpeed: 500,
+    fitToSectionDelay: 0,
     anchors: ["home", "skills", "experience", "location", "contact"],
     afterLoad: function (anchorLink) {
     },
