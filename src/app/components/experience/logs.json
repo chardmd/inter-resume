@@ -37,7 +37,7 @@
 	},
 		{
 		"type": "[validate]",
-		"content": "http://www.simulation.com.sg/"
+		"content": "http://www.simulation.com.sg"
 	},
 	{
 		"type": "[validate]",

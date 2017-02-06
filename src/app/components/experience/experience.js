@@ -87,7 +87,7 @@ function Experience($scope, $http, $element, $timeout) {
         selectOption(currentExp);
         createLogsInstall();
       }
-    }, index * 600);
+    }, index * 800);
   }
 
   function selectOption(currentExp) {
