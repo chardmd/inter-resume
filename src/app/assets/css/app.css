@@ -70,10 +70,6 @@ body {
     text-shadow: 1px 1px 1px #000;
 }
 
-.homepage {
-    position: relative;
-}
-
 .homepage .typer {
     width: 110px;
     color: #f9ed89;

@@ -64,7 +64,7 @@ function Homepage($scope, $document) {
 
       case ANCHORS.location:
 
-        title.innerHTML = '<br/>Currently based in Sydney, Australia';
+        title.innerHTML = '<br/>Permanent Resident in Sydney, Australia';
 
         break;
 

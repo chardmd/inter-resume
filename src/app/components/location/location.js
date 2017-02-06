@@ -5,18 +5,11 @@ angular
       controller: Location
     });
 
-Location.$inject = ['$scope', '$window'];
+Location.$inject = ['$scope', '$window', '$timeout', '$element'];
 
 /** @ngInject */
-function Location($scope, $window) {
+function Location($scope, $window, $timeout, $element) {
   var $ctrl = this;
-
-  $ctrl.display = false;
-
-  $scope.$on('location', function () {
-    $ctrl.display = true;
-    $scope.$apply();
-  });
 
     // svg path for target icon
   var targetSVG = "M9,0C4.029,0,0,4.029,0,9s4.029,9,9,9s9-4.029,9-9S13.971,0,9,0z M9,15.93 c-3.83,0-6.93-3.1-6.93-6.93S5.17,2.07,9,2.07s6.93,3.1,6.93,6.93S12.83,15.93,9,15.93 M12.5,9c0,1.933-1.567,3.5-3.5,3.5S5.5,10.933,5.5,9S7.067,5.5,9,5.5 S12.5,7.067,12.5,9z";
@@ -45,7 +38,7 @@ function Location($scope, $window) {
     dangerDark: "#c54949"
   };
 
-  $window.map = AmCharts.makeChart("map", {
+  var mapSettings = {
     type: 'map',
     dragMap: false,
     zoomOnDoubleClick: false,
@@ -75,7 +68,7 @@ function Location($scope, $window) {
       }],
       images: [{
         svgPath: targetSVG,
-        label: "Clark, Philippines",
+        label: "Clark,",
         latitude: 15.4828,
         longitude: 120.7120,
         color: layoutColors.successLight
@@ -98,7 +91,7 @@ function Location($scope, $window) {
         animateAlongLine: true,
         lineId: "line1",
         flipDirection: false,
-        loop: true,
+        loop: false,
         scale: 0.080,
         positionScale: 1.8
       }, {
@@ -109,7 +102,7 @@ function Location($scope, $window) {
         animateAlongLine: true,
         lineId: "line2",
         flipDirection: false,
-        loop: true,
+        loop: false,
         scale: 0.03,
         positionScale: 1.3
       }]
@@ -138,5 +131,19 @@ function Location($scope, $window) {
       alpha: 0.4
     }
 
+  };
+
+  $ctrl.display = false;
+  $element.find('#map').hide();
+
+  $scope.$on('location', function () {
+    $ctrl.display = true;
+
+    if ($window.mapLocation === undefined) {
+      $window.mapLocation = AmCharts.makeChart("map", mapSettings);
+      $element.find('#map').fadeIn(500);
+    }
+
+    $scope.$apply();
   });
 }

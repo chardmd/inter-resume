@@ -87,7 +87,7 @@ function Experience($scope, $http, $element, $timeout) {
         selectOption(currentExp);
         createLogsInstall();
       }
-    }, index * 800);
+    }, index * 400);
   }
 
   function selectOption(currentExp) {
@@ -139,7 +139,7 @@ function Experience($scope, $http, $element, $timeout) {
           displayInfoClear();
         }, 500);
       }
-    }, index * 300);
+    }, index * 200);
   }
 
   function displayInfoClear() {
