@@ -9,9 +9,6 @@ angular
 function HeaderComponent() {
   var $ctrl = this;
 
-  // controller methods
-  $ctrl.pressLink = pressLink;
-
   // set header components links
   $ctrl.items = [
     {
@@ -35,22 +32,4 @@ function HeaderComponent() {
       label: "Contact"
     }
   ];
-
-  function pressLink($event) {
-  	var currentElement = $event.currentTarget;
-
-  	removeActiveSelection(currentElement);
-
-  	// add active class
-  	angular.element(currentElement).addClass('active');
-
-  	var link = angular.element(currentElement).attr('data-menuanchor');
-
-  	$.fn.fullpage.moveTo(link);
-  }
-
-  function removeActiveSelection(currentElement) {
-  	var parentNav = angular.element(currentElement).parent();
-  	angular.element(parentNav).find('li').removeClass('active');
-  }
 }

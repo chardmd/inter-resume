@@ -139,7 +139,7 @@ function Location($scope, $window, $timeout, $element) {
   $scope.$on('location', function () {
     $ctrl.display = true;
 
-    if ($window.mapLocation === undefined) {
+    if (angular.isUndefined($window.mapLocation)) {
       $window.mapLocation = AmCharts.makeChart("map", mapSettings);
       $element.find('#map').fadeIn(500);
     }

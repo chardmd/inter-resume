@@ -5,4 +5,6 @@ angular
       controller: App
     });
 
-function App() {}
+function App() {
+  console.log('Hi there! Thank you for viewing my site! Have fun inspecting my code :)');
+}
