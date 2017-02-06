@@ -18,8 +18,6 @@ function Main($scope, $element, $document) {
     scrollingSpeed: 600,
     anchors: ["home", "skills", "experience", "location", "contact"],
     afterLoad: function (anchorLink) {
-      // trigger events for the corresponding child scopes
-      $scope.$broadcast(anchorLink);
     },
     onLeave: function (index, nextIndex, direction) {
       var isBadgeHidden = true;
@@ -34,6 +32,10 @@ function Main($scope, $element, $document) {
         nextIndex: nextIndex
       };
 
+      // broadcast the current slide
+      var anchorLink = getAnchorLink(nextIndex);
+      $scope.$broadcast(anchorLink);
+
       $scope.$broadcast("slideToHome", badge);
     }
   };
@@ -42,4 +44,26 @@ function Main($scope, $element, $document) {
     $element.find('#fullpage').fullpage(options);
     $element.find('.slidePage').removeClass('hide');
   });
+
+  function getAnchorLink(index) {
+    var anchorLink = "";
+    switch (index) {
+      case 1:
+        anchorLink = "home";
+        break;
+      case 2:
+        anchorLink = "skills";
+        break;
+      case 3:
+        anchorLink = "experience";
+        break;
+      case 4:
+        anchorLink = "location";
+        break;
+      default:
+        anchorLink = "contact";
+        break;
+    }
+    return anchorLink;
+  }
 }

@@ -23,8 +23,10 @@ function Skills($element, $scope, $http, $timeout) {
   var animationTrigger = false;
 
   $scope.$on('skills', function () {
-    angular.element('.skills .pageLabel').addClass('animated fadeIn');
-    angular.element('#skillTag').text('Skilled in ');
+    $timeout(function () {
+      $element.find('.skills .pageLabel').addClass('animated fadeIn');
+      $element.find('#skillTag').text('Skilled in ');
+    }, 500);
 
     if (animationTrigger === false) {
       animationTrigger = true;
