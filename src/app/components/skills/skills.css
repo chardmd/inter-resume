@@ -1,7 +1,11 @@
 .skills .grid-item {
-    float: left;
+    display:inline-block;
     width: 10%;
     padding: 10px;
+}
+
+.skills .grid-item img {
+    display: inline;
 }
 
 .skills .pageLabel {
@@ -24,7 +28,7 @@
 
 @media only screen and (min-width: 480px) {
     .skills .grid-item {
-        width: 15%;
+        width: 14%;
     }
 
 }
