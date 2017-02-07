@@ -60,11 +60,11 @@
     position: absolute;
     bottom: 5%;
     right: 50px;
-    opacity: 0.8;
     -webkit-animation: bounce 2s infinite ease-in-out;
     -moz-animation: bounce 2s infinite ease-in-out;
     width: 200px;
     text-align: right;
+    cursor: pointer;
 }
 
 .speech-bubble {
