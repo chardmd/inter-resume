@@ -1,10 +1,5 @@
-.homepage #headerwrap {
-    background: url("/app/assets/img/header_bg.jpg") no-repeat center top;
-    text-align: center;
-    background-attachment: relative;
-    background-position: center center;
-    height: 100%;
-    width: 100%;
+.homepage {
+    background-image: url("/app/assets/img/header_bg.jpg");
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -12,22 +7,29 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
 }
 
-.homepage #headerwrap p {
+.homepage p {
     color: #ffffff;
     font-size: 40px;
-    font-weight: 700;
-    text-align: center;
+    font-weight: 900;
     line-height: 40px;
     letter-spacing: 3px;
     text-shadow: 1px 1px 1px #000;
 }
 
-.homepage .typer {
-    width: 110px;
-    color: #f9ed89;
+.homepage .absolute-center {
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    left: 0;
+    top: 5%;
+    right: 0;
+    text-align: center;
+}
+
+.homepage .absolute-center img {
+    margin-bottom: 15px;
 }
 
 .homepage .network-name {
@@ -37,20 +39,21 @@
     letter-spacing: 2px;
 }
 
-.homepage .absolute-center {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.homepage .typer {
+    width: 110px;
+    color: #f9ed89;
 }
 
 .homepage .bounce {
+    position: absolute;
     color: #ffffff;
     cursor: pointer;
+    bottom: 0;
+    left: 0;
+    top: 17%;
+    right: 0;
+    text-align: center;
     opacity: 0.5;
-    position: absolute;
-    top: 16.5%;
-    left: 46.3%;
 }
 
 .bouncing-badge {
