@@ -1,0 +1,17 @@
+/* app css stylesheet */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/***===================COMMON======================***/
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+.hide {
+    display: none;
+}

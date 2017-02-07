@@ -1,0 +1,36 @@
+.skills .grid-item {
+    float: left;
+    width: 10%;
+    padding: 10px;
+}
+
+.skills .pageLabel {
+    font-size: 43px;
+    line-height: 40px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #000000;
+    top: 0;
+    left: 0;
+    padding-bottom: 20px;
+    height: 60px;
+}
+
+@media only screen and (min-width: 320px) {
+    .skills .grid-item {
+        width: 18%;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .skills .grid-item {
+        width: 15%;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    .skills .grid-item {
+        width: 10%;
+    }
+}

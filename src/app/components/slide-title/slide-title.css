@@ -1,0 +1,11 @@
+.slideTitle .pageLabel {
+	font-size: 43px;
+    line-height: 40px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #000000;
+    top: 0;
+    left: 0;
+    padding-bottom: 20px;
+    height: 60px;
+}

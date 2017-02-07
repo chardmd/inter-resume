@@ -10,13 +10,15 @@ Main.$inject = ['$scope', '$element', '$document'];
 /** @ngInject */
 function Main($scope, $element, $document) {
   var options = {
-    sectionsColor: ['#ffffff', '#ffffff', '#ffffff', '#ffffff'],
+    sectionsColor: ['#f2f2f2', '#f2f2f2', '#f2f2f2', '#f2f2f2', '#f2f2f2'],
     menu: '#menu',
     fixedElements: '.bouncing-badge',
     paddingTop: '50px',
     css3: true,
     scrollingSpeed: 500,
+    fitToSection: true,
     fitToSectionDelay: 0,
+    responsiveWidth: 1100,
     anchors: ["home", "skills", "experience", "location", "contact"],
     afterLoad: function (anchorLink) {
     },

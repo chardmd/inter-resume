@@ -1,20 +1,10 @@
-.shellContainer {
+.experience .shellContainer {
     font-family: "Roboto", sans-serif;
     font-size: 12pt;
 }
 
-#shell {
-    width: 100%;
-    height: 75%;
-    background: #000;
-    border-radius: 8px;
-    margin: 0 auto;
-    color: #383838;
-    position: absolute;
-    cursor: text;
-}
 
-#upper {
+.experience #upper {
     background: #e5e5e5;
     background: -webkit-linear-gradient(#e5e5e5 0%, #b0b0b0 100%);
     background: linear-gradient(#e5e5e5 0%, #b0b0b0 100%);
@@ -28,17 +18,17 @@
     border-bottom: 2px solid #333;
 }
 
-#enter {
+.experience #enter {
     border: 1px solid red;
     width: 100%;
     height: 100%;
 }
 
-.title {
+.experience .title {
     margin-left: -70px;
 }
 
-.button {
+.experience .button {
     width: 12px;
     height: 12px;
     -webkit-border-radius: 100%;
@@ -48,71 +38,73 @@
     float: left;
 }
 
-#buttons {
+.experience #buttons {
     margin-left: 5px;
 }
 
-.red {
+.experience .red {
     background: red;
 }
 
-.yellow {
+.experience .yellow {
     background: yellow;
 }
 
-.green {
+.experience .green {
     background: green;
 }
 
-.tortoise {
+.experience .tortoise {
     color: #0ab;
 }
 
-#main {
-    padding: 5px;
-    color: #c0c7c7;
+.experience #main {
+    height: 450px;
+    color: #ffffff;
+    background: #000;
+    padding-left: 7px;
 }
 
-#main .fore {
+.experience #main .fore {
     color: #f9ed89;
 }
 
-#main .accent {
+.experience #main .accent {
     color: #00b5c3;
 }
 
-#main .commandContainer {
-    position: absolute;
+.experience #main .commandContainer {
+   /* position: absolute;*/
     overflow-x: hidden;
     overflow-y: auto;
-    height: 89%;
-    width: 99%;
+    height: 100%;
+    width: 100%;
     cursor: pointer;
 }
 
-.commandContainer .type {
+.experience .commandContainer .type {
     color: #15f17b;
         margin-right: 30px;
 }
 
-.command {
+.experience .command {
     display: none;
 }
 
-.command .highlight {
+.experience .command .highlight {
     color: #00aabb;
 }
 
-.select {
+.experience .select {
     color: #15f17b;
 }
 
-.command > div span {
+.experience .command > div span {
     width: 15px;
     display: inline-block;
     font-weight: bold;
 }
 
-.loading {
+.experience .loading {
     display: none;
 }

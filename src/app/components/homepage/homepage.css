@@ -1,49 +1,4 @@
-/* app css stylesheet */
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
-/***===================COMMON======================***/
-
-body {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    color: #555;
-    -webkit-font-smoothing: antialiased;
-    -webkit-overflow-scrolling: touch;
-}
-
-.navbar-inverse .navbar-nav > li > a {
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.navbar-inverse .navbar-nav>.active>a,
-.navbar-inverse .navbar-nav>.active>a:focus,
-.navbar-inverse .navbar-nav>.active>a:hover {
-    background-color: #00aabb;
-}
-
-.pageLabel {
-    font-size: 43px;
-    line-height: 40px;
-    letter-spacing: 3px;
-    font-weight: bold;
-    color: #000000;
-    top: 0;
-    left: 0;
-    padding-bottom: 20px;
-    height: 60px;
-}
-
-.section {
-    position: relative;
-}
-
-
-/***===================HOMEPAGE======================***/
-
-
-#headerwrap {
+.homepage #headerwrap {
     background: url("/app/assets/img/header_bg.jpg") no-repeat center top;
     text-align: center;
     background-attachment: relative;
@@ -60,7 +15,7 @@ body {
     background-size: cover;
 }
 
-#headerwrap p {
+.homepage #headerwrap p {
     color: #ffffff;
     font-size: 40px;
     font-weight: 700;
@@ -84,7 +39,7 @@ body {
 
 .homepage .absolute-center {
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -92,10 +47,10 @@ body {
 .homepage .bounce {
     color: #ffffff;
     cursor: pointer;
-    position: absolute;
-    bottom: 5%;
-    right: 48%;
     opacity: 0.5;
+    position: absolute;
+    top: 16.5%;
+    left: 46.3%;
 }
 
 .bouncing-badge {
@@ -171,7 +126,7 @@ body {
     }
 }
 
-.typer__cursor {
+.homepage .typer__cursor {
     -webkit-animation: blink 1s infinite;
     -moz-animation: blink 1s infinite;
     animation: blink 1s infinite;
@@ -209,52 +164,4 @@ body {
     .bouncing-badge {
         display: none;
     }
-}
-
-.hide {
-    display: none;
-}
-
-
-/***===================SKILLS======================***/
-
-.skills .grid-item {
-    float: left;
-    width: 10%;
-    padding: 10px;
-}
-
-@media only screen and (min-width: 320px) {
-    .skills .grid-item {
-        width: 18%;
-    }
-}
-
-@media only screen and (min-width: 480px) {
-    .skills .grid-item {
-        width: 15%;
-    }
-
-}
-
-@media only screen and (min-width: 768px) {
-    .skills .grid-item {
-        width: 10%;
-    }
-}
-
-
-/***===================EXPERIENCE======================***/
-
-
-/***===================LOCATION======================***/
-
-.location #map {
-    position: absolute;
-    width: 100%;
-    height: 78%;
-}
-
-.location a[title='Interactive JavaScript maps'] {
-    display: none !important;
 }
