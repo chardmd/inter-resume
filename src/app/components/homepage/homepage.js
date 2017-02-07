@@ -52,7 +52,7 @@ function Homepage($scope, $document) {
 
       case ANCHORS.skills:
 
-        title.innerHTML = '<br/>Here are some of the tools that I used on my projects';
+        title.innerHTML = 'Here are some of the tools that I used on my projects';
 
         break;
 
@@ -64,7 +64,7 @@ function Homepage($scope, $document) {
 
       case ANCHORS.location:
 
-        title.innerHTML = '<br/>Currently based in Sydney, Australia';
+        title.innerHTML = 'Currently based in Sydney, Australia';
 
         break;
 

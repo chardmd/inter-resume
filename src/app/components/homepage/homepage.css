@@ -70,19 +70,20 @@
 .speech-bubble {
     position: relative;
     background: #00aabb;
-    margin: 2em 0;
     text-align: center;
     color: white;
-    text-shadow: 0 -.05em .1em rgba(0, 0, 0, .3);
+    text-shadow: 0 -0.05em 0.1em rgba(0, 0, 0, .3);
     height: 116px;
+    margin-bottom: 20px;
 }
 
 .speech-bubble h4 {
     text-align: center;
-    top: 8%;
     position: absolute;
     margin: 0px 10px;
     font-weight: bold;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .speech-bubble:after {
