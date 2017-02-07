@@ -12,7 +12,6 @@ function Main($scope, $element, $document) {
   var options = {
     sectionsColor: ['#f2f2f2', '#f2f2f2', '#f2f2f2', '#f2f2f2', '#f2f2f2'],
     menu: '#menu',
-    fixedElements: '.bouncing-badge',
     paddingTop: '50px',
     css3: true,
     scrollingSpeed: 500,
