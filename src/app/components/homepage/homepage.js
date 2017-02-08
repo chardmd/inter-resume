@@ -8,4 +8,13 @@ angular
 Homepage.$inject = [];
 
 /** @ngInject */
-function Homepage() {}
+function Homepage() {
+  var $ctrl = this;
+
+  // controller methods
+  $ctrl.moveDown = moveDown;
+
+  function moveDown() {
+    $.fn.fullpage.moveSectionDown();
+  }
+}

@@ -11,9 +11,6 @@ Badge.$inject = ['$scope', '$element', '$document'];
 function Badge($scope, $element, $document) {
   var $ctrl = this;
 
-  // controller methods
-  $ctrl.moveDown = moveDown;
-
   $scope.$on('slideToHome', function (event, badge) {
     var isBadgeHidden = badge.isBadgeHidden;
     var nextIndex = badge.nextIndex;
@@ -30,10 +27,6 @@ function Badge($scope, $element, $document) {
 
     displaySpeechBubble(nextIndex);
   });
-
-  function moveDown() {
-    $.fn.fullpage.moveSectionDown();
-  }
 
   function displaySpeechBubble(nextIndex) {
     var ANCHORS = {
