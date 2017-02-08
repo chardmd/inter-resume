@@ -11,7 +11,7 @@ Skills.$inject = ['$element', '$scope', '$http', '$timeout'];
 function Skills($element, $scope, $http, $timeout) {
   var $ctrl = this;
 
-  // controller variables
+    // controller variables
   $ctrl.skillList = [];
 
   var words = ['Javascript', 'Java', 'jQuery', 'Bootstrap', 'NodeJS', 'Spring', 'MongoDB',
@@ -35,14 +35,14 @@ function Skills($element, $scope, $http, $timeout) {
     }
   });
 
-  // init
+    // init
   fetchSkillList();
 
   function fetchSkillList() {
     $http.get('app/components/skills/skills.json')
-      .then(function (response) {
-        $ctrl.skills = response.data;
-      });
+            .then(function (response) {
+              $ctrl.skills = response.data;
+            });
   }
 
   function startIconAnimation(words) {
@@ -108,7 +108,7 @@ function Skills($element, $scope, $http, $timeout) {
     var image = $element.find("img[alt='" + text + "']");
     angular.element(image).addClass('animated ' + randomShake);
 
-    // remove the shake animation
+        // remove the shake animation
     $timeout(function () {
       var previousImage = $element.find("img[alt='" + text + "']");
       angular.element(previousImage).removeClass('animated ' + randomShake);
