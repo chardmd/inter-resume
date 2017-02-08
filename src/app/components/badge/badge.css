@@ -19,7 +19,6 @@
     text-shadow: 0 -0.05em 0.1em rgba(0, 0, 0, .3);
     height: 116px;
     margin-bottom: 20px;
-    border: 2px solid #f9ed89;
 }
 
 .badgeComponent .speech-bubble h4 {
