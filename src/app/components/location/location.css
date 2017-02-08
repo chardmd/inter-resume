@@ -7,9 +7,10 @@
 .location #map {
     position: absolute;
     height: 75%;
-    width: 100%;
+    width: 90%;
     margin: auto;
     left: 5%;
+    background: #fff;
 }
 
 .location a[title='Interactive JavaScript maps'] {
