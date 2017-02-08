@@ -51,7 +51,7 @@ function Badge($scope, $element, $document) {
 
       case ANCHORS.experience:
 
-        title.innerHTML = 'Experience in developing enterprise and commercial software';
+        title.innerHTML = 'More than 5 years experience in developing enterprise and commercial software';
 
         break;
 

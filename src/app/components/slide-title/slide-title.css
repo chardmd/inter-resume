@@ -1,12 +1,19 @@
+.slideTitle {
+    text-align: center;
+    margin: 20px 0;
+}
+
 .slideTitle .pageLabel {
-	font-size: 43px;
+    font-size: 43px;
     line-height: 40px;
     letter-spacing: 3px;
     font-weight: bold;
     color: #000000;
-    top: 0;
-    left: 0;
-    padding-bottom: 20px;
+    padding-bottom: 8px;
     height: 60px;
-    text-align: center;
+    background-size: calc(100% + 7px) 12px;
+    background-position: 0 90%;
+    background-repeat: no-repeat;
+    background-image: -webkit-linear-gradient(#f9ed89, #f9ed89);
+    background-image: linear-gradient(#f9ed89, ##f9ed89);
 }
