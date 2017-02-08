@@ -1,57 +1,50 @@
-<div class="experience">
-   
-   <slide-title title="Work Experience" display="$ctrl.display"></slide-title>
-
-    <div class="shellContainer">
-            <div id="upper">
-                <div id="buttons">
-                    <div class="button red"></div>
-                    <div class="button yellow"></div>
-                    <div class="button green"></div>
-                </div>
-                <span class="title">1. richard@osx: ~ (zsh)</span>
-            </div>
-            <div id="main">
-                <div class="commandContainer">
-                    <div>Last login: <span>{{$ctrl.currentDate | date: 'EEE MMM dd HH:mm:ss'}}</span> on ttys000</div>
-                    <div>
-                        <span class="default">
+<slide-title title="Work Experience" display="$ctrl.display"></slide-title>
+<div class="wrapper">
+    <div id="upper">
+        <div id="buttons">
+            <div class="button red"></div>
+            <div class="button yellow"></div>
+            <div class="button green"></div>
+        </div>
+        <span class="title">1. richard@osx: ~ (zsh)</span>
+    </div>
+    <div class="commandContainer">
+        <div>Last login: <span>{{$ctrl.currentDate | date: 'EEE MMM dd HH:mm:ss'}}</span> on ttys000</div>
+        <div>
+            <span class="default">
                         [{{$ctrl.currentDate | date: 'HH:mm:ss'}}]<span class="fore">&nbsp;richard</span>:<span class="accent">~</span>:
-                        </span>
-
-                        <typer words="['load work-experience --global']" start-trigger="$ctrl.startType" start-typing="true" repeat="false" type-time="60" start-delay='
+            </span>
+            <typer words="['load work-experience --global']" start-trigger="$ctrl.startType" start-typing="true" repeat="false" type-time="60" start-delay='
                         1000' on-complete="$ctrl.displayCommand()"></typer>
-                        
-                        <div class="command">
-                            <span>Run a task:</span>
-                             <div ng-repeat="exp in $ctrl.experienceList track by $index">
-                                <span>></span>{{exp.company}}
-                            </div>
-                            <div>
-                                <span>></span>All (Install all options)
-                            </div>
-                        </div>
-                    <div id="info_message_allOption" class="fore hide">[All] option selected. Please wait..</div>
-                    <div class="logs"></div>
-                    <div id="info_message_download" class="fore hide">All data downloaded. Preparing to execute print() command</div>
-                    <div id="info_message_clear" class="fore hide">::print():: <span class="select">[executed]</span> Displaying work information..</div>
-                    <div id="info_message_gap" class="hide">=====================================================================</div>
-                    <div class="info_message_work hide" ng-repeat="exp in $ctrl.experienceList track by $index">
-                        <div>
-                            <span class="tortoise">Company:</span>&nbsp;<span>{{exp.company}}</span>
-                        </div>
-                        <div>
-                            <span class="tortoise">Position:</span>&nbsp;<span>{{exp.position}}</span>
-                        </div>
-                        <div>
-                            <span class="tortoise">Work Duration:</span>&nbsp;<span>{{exp.work_duration}}</span>
-                        </div>
-                        <div>
-                            <span class="tortoise">Duties:</span>&nbsp;<span>{{exp.description}}</span>
-                        </div>
-                        <br />
-                    </div>
+            <div class="command">
+                <span>Run a task:</span>
+                <div ng-repeat="exp in $ctrl.experienceList track by $index">
+                    <span>></span>{{exp.company}}
+                </div>
+                <div>
+                    <span>></span>All (Install all options)
                 </div>
             </div>
+            <div id="info_message_allOption" class="fore hide">[All] option selected. Please wait..</div>
+            <div class="logs"></div>
+            <div id="info_message_download" class="fore hide">All data downloaded. Preparing to execute print() command</div>
+            <div id="info_message_clear" class="fore hide">::print():: <span class="select">[executed]</span> Displaying work information..</div>
+            <div id="info_message_gap" class="hide">=====================================================================</div>
+            <div class="info_message_work hide" ng-repeat="exp in $ctrl.experienceList track by $index">
+                <div>
+                    <span class="tortoise">Company:</span>&nbsp;<span>{{exp.company}}</span>
+                </div>
+                <div>
+                    <span class="tortoise">Position:</span>&nbsp;<span>{{exp.position}}</span>
+                </div>
+                <div>
+                    <span class="tortoise">Work Duration:</span>&nbsp;<span>{{exp.work_duration}}</span>
+                </div>
+                <div>
+                    <span class="tortoise">Duties:</span>&nbsp;<span>{{exp.description}}</span>
+                </div>
+                <br />
+            </div>
+        </div>
     </div>
 </div>

@@ -1,3 +1,8 @@
+.skills {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
 .skills .grid-item {
     display:inline-block;
     width: 10%;
@@ -18,6 +23,7 @@
     left: 0;
     padding-bottom: 20px;
     height: 60px;
+    text-align: center;
 }
 
 @media only screen and (min-width: 320px) {
