@@ -7,12 +7,7 @@ angular
 
 /** @ngInject */
 function Contact($scope) {
-  var $ctrl = this;
-
-  $ctrl.display = false;
-
   $scope.$on('contact', function () {
-    $ctrl.display = true;
-    $scope.$apply();
+
   });
 }

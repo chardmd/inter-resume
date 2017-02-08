@@ -11,33 +11,30 @@ Experience.$inject = ['$scope', '$http', '$element', '$timeout'];
 function Experience($scope, $http, $element, $timeout) {
   var $ctrl = this;
 
-  // controller methods
+    // controller methods
   $ctrl.displayCommand = displayCommand;
 
-  // controller variables
+    // controller variables
   $ctrl.startType = false;
   $ctrl.currentDate = new Date();
   $ctrl.experienceList = [];
   $ctrl.logs = [];
-  $ctrl.display = false;
 
   $scope.$on('experience', function () {
     var startAnimation = true;
     if (startAnimation === true) {
-      // run the animation only once
+            // run the animation only once
       startAnimation = false;
-
-      $ctrl.display = true;
 
       $ctrl.startType = true;
     }
 
-    // set to view
+        // set to view
     var commandContainer = $element.find('.commandContainer');
     commandContainer[0].scrollTop = commandContainer[0].scrollHeight;
   });
 
-  // init
+    // init
   $ctrl.$onInit = function () {
     fetchExperienceList();
     fetchLogList();
@@ -45,16 +42,16 @@ function Experience($scope, $http, $element, $timeout) {
 
   function fetchExperienceList() {
     $http.get('app/components/experience/experience.json')
-      .then(function (response) {
-        $ctrl.experienceList = response.data;
-      });
+            .then(function (response) {
+              $ctrl.experienceList = response.data;
+            });
   }
 
   function fetchLogList() {
     $http.get('app/components/experience/logs.json')
-      .then(function (response) {
-        $ctrl.logs = response.data;
-      });
+            .then(function (response) {
+              $ctrl.logs = response.data;
+            });
   }
 
   function displayCommand() {
@@ -131,7 +128,7 @@ function Experience($scope, $http, $element, $timeout) {
       if (index === maxIndex) {
         $timeout(function () {
           $element.find('#info_message_download').removeClass('hide');
-          // set to view
+                    // set to view
 
           var commandContainer = $element.find('.commandContainer');
           commandContainer[0].scrollTop = commandContainer[0].scrollHeight;
@@ -147,7 +144,7 @@ function Experience($scope, $http, $element, $timeout) {
 
       $element.find('#info_message_clear').removeClass('hide');
       displayInfoGap();
-      // set to view
+            // set to view
       commandContainer[0].scrollTop = commandContainer[0].scrollHeight;
     }, 500);
   }
@@ -160,7 +157,7 @@ function Experience($scope, $http, $element, $timeout) {
 
       displayWorkExperience();
 
-      // set to view
+            // set to view
       commandContainer[0].scrollTop = commandContainer[0].scrollHeight;
     }, 500);
   }
@@ -170,7 +167,7 @@ function Experience($scope, $http, $element, $timeout) {
       var commandContainer = $element.find('.commandContainer');
 
       $element.find('.info_message_work').removeClass('hide');
-      // set to view
+            // set to view
       commandContainer[0].scrollTop = commandContainer[0].scrollHeight;
     }, 500);
   }

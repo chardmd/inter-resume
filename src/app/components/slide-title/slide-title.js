@@ -15,11 +15,7 @@ SlideTitle.$inject = ['$scope', '$element', '$timeout'];
 function SlideTitle($scope, $element, $timeout) {
   var $ctrl = this;
 
-  $ctrl.$onChanges = function (change) {
-    if (change.display.currentValue === true) {
-      $element.find('.pageLabel').text($ctrl.title);
-    } else {
-      $element.find('.pageLabel').text("");
-    }
+  $ctrl.$onInit = function () {
+    $element.find('.pageLabel').text($ctrl.title);
   };
 }

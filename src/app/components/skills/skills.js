@@ -23,11 +23,6 @@ function Skills($element, $scope, $http, $timeout) {
   var animationTrigger = false;
 
   $scope.$on('skills', function () {
-    $timeout(function () {
-      $element.find('.skills .pageLabel').addClass('animated fadeIn');
-      $element.find('#skillTag').text('Skilled in ');
-    }, 500);
-
     if (animationTrigger === false) {
       animationTrigger = true;
 
@@ -35,8 +30,10 @@ function Skills($element, $scope, $http, $timeout) {
     }
   });
 
-    // init
-  fetchSkillList();
+  // init
+  $ctrl.$onInit = function () {
+    fetchSkillList();
+  };
 
   function fetchSkillList() {
     $http.get('app/components/skills/skills.json')
@@ -79,7 +76,7 @@ function Skills($element, $scope, $http, $timeout) {
     $timeout(function () {
       var iconText = words[index];
 
-      document.querySelector('#skillTag').innerText = "Skilled in " + iconText;
+      $element.find('.pageLabel').text(iconText);
 
       animateIcon(iconText);
 
