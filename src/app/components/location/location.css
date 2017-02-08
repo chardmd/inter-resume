@@ -1,6 +1,15 @@
-.location #map {
+.location {
+    position: relative;
+    height: 100%;
     width: 100%;
-    height: 450px;
+}
+
+.location #map {
+    position: absolute;
+    height: 75%;
+    width: 100%;
+    margin: auto;
+    left: 5%;
 }
 
 .location a[title='Interactive JavaScript maps'] {
