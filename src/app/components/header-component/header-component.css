@@ -10,6 +10,14 @@
     font-weight: bold;
 }
 
+.navHeader .navbar-default .navbar-nav>li>a {
+    color: #00aabb;
+}
+
+.navHeader .navbar-default .navbar-nav>li>a:focus,
+.navHeader .navbar-default .navbar-nav>li>a:hover {
+    color: #fbc659;
+}
 
 .navHeader .navbar {
 	border-bottom: 1px solid rgba(0,0,0,0.075);
