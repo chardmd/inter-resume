@@ -12,13 +12,13 @@
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	height: 20%;
-	color: #ffffff;
-	background: #000;
+	height: 80px;
+	background-image: -webkit-linear-gradient(#000, #000);
 	text-align: center;
 }
 
 .contact .footer .note {
-	margin-top: 2%;
-
+	color: #f9f2f2;
+	margin-top: 25px;
+	font-size: 13px;
 }
