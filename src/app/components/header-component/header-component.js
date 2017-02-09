@@ -25,10 +25,6 @@ function HeaderComponent($scope, $element) {
   // set header components links
   $ctrl.items = [
     {
-      link: "home",
-      label: "Home"
-    },
-    {
       link: "skills",
       label: "Web Toolkit"
     },

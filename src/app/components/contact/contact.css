@@ -20,5 +20,9 @@
 .contact .footer .note {
 	color: #f9f2f2;
 	margin-top: 25px;
-	font-size: 13px;
+	font-size: 14px;
+}
+
+.contact .footer .note a {
+	color: #fbc659;
 }
