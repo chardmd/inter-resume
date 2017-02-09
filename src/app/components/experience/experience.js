@@ -68,7 +68,7 @@ function Experience($scope, $http, $element, $timeout) {
       for (var i = 0; i < exp.length; i++) {
         displayTask(exp, i);
       }
-    }, 1000);
+    }, 500);
   }
 
   function displayTask(exp, index) {
@@ -83,21 +83,21 @@ function Experience($scope, $http, $element, $timeout) {
         selectOption(currentExp);
         createLogsInstall();
       }
-    }, index * 400);
+    }, index * 300);
   }
 
   function selectOption(currentExp) {
     $timeout(function () {
       currentExp.classList.remove('highlight');
       currentExp.classList.add('select');
-    }, 800);
+    }, 600);
   }
 
   function createLogsInstall() {
     $timeout(function () {
       $element.find('#info_message_allOption').removeClass('hide');
       downloadInfo();
-    }, 1500);
+    }, 1200);
   }
 
   function downloadInfo() {
@@ -106,7 +106,7 @@ function Experience($scope, $http, $element, $timeout) {
       for (var i = 0; i < logLength; i++) {
         createDownloadInfo(i);
       }
-    }, 1000);
+    }, 500);
   }
 
   function createDownloadInfo(index) {
@@ -135,7 +135,7 @@ function Experience($scope, $http, $element, $timeout) {
           displayInfoClear();
         }, 500);
       }
-    }, index * 200);
+    }, index * 100);
   }
 
   function displayInfoClear() {
@@ -146,7 +146,7 @@ function Experience($scope, $http, $element, $timeout) {
       displayInfoGap();
             // set to view
       commandContainer[0].scrollTop = commandContainer[0].scrollHeight;
-    }, 500);
+    }, 400);
   }
 
   function displayInfoGap() {
@@ -159,7 +159,7 @@ function Experience($scope, $http, $element, $timeout) {
 
             // set to view
       commandContainer[0].scrollTop = commandContainer[0].scrollHeight;
-    }, 500);
+    }, 300);
   }
 
   function displayWorkExperience() {
@@ -169,6 +169,6 @@ function Experience($scope, $http, $element, $timeout) {
       $element.find('.info_message_work').removeClass('hide');
             // set to view
       commandContainer[0].scrollTop = commandContainer[0].scrollHeight;
-    }, 500);
+    }, 300);
   }
 }
