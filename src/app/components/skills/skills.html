@@ -1,10 +1,8 @@
-<div class="skills">
-	<slide-title title="Web Toolkit"></slide-title>
-    <div class="grid">
-        <div class="grid-item" ng-repeat="skill in $ctrl.skills track by $index">
-            <a href="{{skill.link}}" target="_blank">
-                <img class="img-responsive" ng-src="{{skill.img}}" alt="{{skill.name}}" />
-            </a>
-        </div>
+<slide-title title="Web Toolkit"></slide-title>
+<div class="grid">
+    <div class="grid-item" ng-repeat="skill in $ctrl.skills track by $index">
+        <a href="{{skill.link}}" target="_blank">
+            <img class="img-responsive" ng-src="{{skill.img}}" alt="{{skill.name}}" />
+        </a>
     </div>
 </div>

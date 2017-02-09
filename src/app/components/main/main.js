@@ -10,7 +10,7 @@ Main.$inject = ['$scope', '$element', '$document'];
 /** @ngInject */
 function Main($scope, $element, $document) {
   var options = {
-    sectionsColor: ['#f2f2f2', '#f2f2f2', '#f2f2f2', '#f2f2f2', '#f2f2f2'],
+    sectionsColor: ['#000', '#000', '#000', '#000', '#000'],
     menu: '#menu',
     paddingTop: '50px',
     css3: true,

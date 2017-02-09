@@ -1,4 +1,8 @@
 .skills {
+    position: relative;
+}
+
+.grid {
     width: 90%;
     margin: auto;
 }
