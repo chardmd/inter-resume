@@ -9,7 +9,7 @@ Badge.$inject = ['$scope', '$element', '$document'];
 
 /** @ngInject */
 function Badge($scope, $element, $document) {
-  $scope.$on('slideToHome', function (event, badge) {
+  $scope.$on('badgeListen', function (event, badge) {
     var isBadgeHidden = badge.isBadgeHidden;
     var nextIndex = badge.nextIndex;
 

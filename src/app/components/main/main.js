@@ -29,17 +29,20 @@ function Main($scope, $element, $document) {
         isBadgeHidden = false;
       }
 
+      // broadcast the current slide
+      var anchorLink = getAnchorLink(nextIndex);
+      $scope.$broadcast(anchorLink);
+
+      // broadcast event to badge component
       var badge = {
         isBadgeHidden: isBadgeHidden,
         index: index,
         nextIndex: nextIndex
       };
+      $scope.$broadcast("badgeListen", badge);
 
-      // broadcast the current slide
-      var anchorLink = getAnchorLink(nextIndex);
-      $scope.$broadcast(anchorLink);
-
-      $scope.$broadcast("slideToHome", badge);
+      // broadcast event to header component
+      $scope.$broadcast('headerListen', anchorLink);
     }
   };
 

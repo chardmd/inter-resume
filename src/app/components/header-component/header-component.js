@@ -5,11 +5,19 @@ angular
       controller: HeaderComponent
     });
 
-HeaderComponent.$inject = ['$scope'];
+HeaderComponent.$inject = ['$scope', '$element'];
 
 /** @ngInject */
-function HeaderComponent($scope) {
+function HeaderComponent($scope, $element) {
   var $ctrl = this;
+
+  $scope.$on('headerListen', function (event, anchorLink) {
+    if (anchorLink === 'home') {
+      $element.find('.navHeader').addClass('hide');
+    } else {
+      $element.find('.navHeader').removeClass('hide');
+    }
+  });
 
   // controller methods
   $ctrl.pressLink = pressLink;

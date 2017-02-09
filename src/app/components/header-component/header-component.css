@@ -1,10 +1,14 @@
-.headerComponent .navbar-inverse .navbar-nav > li > a {
+.navHeader .navbar-inverse .navbar-nav > li > a {
     font-weight: bold;
     color: #ffffff;
 }
 
-.headerComponent .navbar-inverse .navbar-nav>.active>a,
-.headerComponent .navbar-inverse .navbar-nav>.active>a:focus,
-.headerComponent .navbar-inverse .navbar-nav>.active>a:hover {
+.navHeader .navbar-right {
+	margin-right: 15px;
+} 
+
+.navHeader .navbar-inverse .navbar-nav>.active>a,
+.navHeader .navbar-inverse .navbar-nav>.active>a:focus,
+.navHeader .navbar-inverse .navbar-nav>.active>a:hover {
     background-color: #00aabb;
 }
