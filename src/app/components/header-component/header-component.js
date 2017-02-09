@@ -25,6 +25,10 @@ function HeaderComponent($scope, $element) {
   // set header components links
   $ctrl.items = [
     {
+      link: "about",
+      label: "About Me"
+    },
+    {
       link: "skills",
       label: "Web Toolkit"
     },
@@ -48,5 +52,8 @@ function HeaderComponent($scope, $element) {
     var anchorLink = angular.element(currentElement).attr('data-menuanchor');
 
     $scope.$broadcast(anchorLink);
+
+    // move to slide
+    $.fn.fullpage.moveTo(anchorLink);
   }
 }

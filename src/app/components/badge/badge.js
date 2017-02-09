@@ -28,10 +28,11 @@ function Badge($scope, $element, $document) {
 
   function displaySpeechBubble(nextIndex) {
     var ANCHORS = {
-      skills: 2,
-      experience: 3,
-      location: 4,
-      contact: 5
+      about: 2,
+      skills: 3,
+      experience: 4,
+      location: 5,
+      contact: 6
     };
 
     var floatingBadge = $document.find('.speech-bubble');
@@ -41,6 +42,12 @@ function Badge($scope, $element, $document) {
 
     switch (nextIndex) {
 
+      case ANCHORS.about:
+
+        title.innerHTML = "G'day mate! Let me introduce myself";
+
+        break;
+
       case ANCHORS.skills:
 
         title.innerHTML = 'Here are some of the tools that I used on my projects';
@@ -49,19 +56,19 @@ function Badge($scope, $element, $document) {
 
       case ANCHORS.experience:
 
-        title.innerHTML = 'More than 5 years experience in developing enterprise and commercial software';
+        title.innerHTML = 'More than five years experience in building enterprise web software';
 
         break;
 
       case ANCHORS.location:
 
-        title.innerHTML = 'Currently based in Sydney, Australia';
+        title.innerHTML = 'Australian Permanent Resident and currently based in Sydney, Australia';
 
         break;
 
       case ANCHORS.contact:
 
-        title.innerHTML = "Let's build cool and exciting projects! Feel free to drop me a message";
+        title.innerHTML = "Got an opportunity? Let's build cool and exciting projects! Just click the Green button.";
 
         break;
 

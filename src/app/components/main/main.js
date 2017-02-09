@@ -10,7 +10,7 @@ Main.$inject = ['$scope', '$element', '$document'];
 /** @ngInject */
 function Main($scope, $element, $document) {
   var options = {
-    sectionsColor: ['#fafafa', '#fafafa', '#fafafa', '#fafafa', '#fafafa'],
+    sectionsColor: ['#fafafa', '#fafafa', '#fafafa', '#fafafa', '#fafafa', '#fafafa'],
     menu: '#menu',
     paddingTop: '50px',
     css3: true,
@@ -19,7 +19,7 @@ function Main($scope, $element, $document) {
     fitToSection: true,
     fitToSectionDelay: 0,
     verticalCentered: false,
-    anchors: ["home", "skills", "experience", "location", "contact"],
+    anchors: ["home", "about", "skills", "experience", "location", "contact"],
     afterLoad: function (anchorLink) {
     },
     onLeave: function (index, nextIndex, direction) {
@@ -54,18 +54,27 @@ function Main($scope, $element, $document) {
   function getAnchorLink(index) {
     var anchorLink = "";
     switch (index) {
+
       case 1:
         anchorLink = "home";
         break;
+
       case 2:
+        anchorLink = "about";
+        break;
+
+      case 3:
         anchorLink = "skills";
         break;
-      case 3:
+
+      case 4:
         anchorLink = "experience";
         break;
-      case 4:
+
+      case 5:
         anchorLink = "location";
         break;
+
       default:
         anchorLink = "contact";
         break;
