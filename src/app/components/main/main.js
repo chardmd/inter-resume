@@ -15,6 +15,7 @@ function Main($scope, $element, $document) {
     paddingTop: '50px',
     css3: true,
     scrollingSpeed: 500,
+    fixedElements: '.headerComponent',
     fitToSection: true,
     fitToSectionDelay: 0,
     verticalCentered: false,

@@ -9,3 +9,18 @@
     bottom: 0;
     right: 0;
 }
+
+.contact .footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 20%;
+	color: #ffffff;
+	background: #000;
+	text-align: center;
+}
+
+.contact .footer .note {
+	margin-top: 2%;
+
+}
