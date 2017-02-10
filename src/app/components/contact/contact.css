@@ -26,3 +26,21 @@
 .contact .footer .note a {
 	color: #fbc659;
 }
+
+.contact .content {
+	text-align: center;
+}
+
+.contact p {
+	font-size: 43px;
+    line-height: 40px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #00aabb;
+    padding-bottom: 8px;
+    height: 60px;
+}
+
+.contact .btn:focus {
+	outline: none;
+}
