@@ -44,7 +44,8 @@
         "fullpage.js": {
             "main": [
                 "./dist/jquery.fullpage.min.js",
-                "./vendors/scrolloverflow.min.js"
+                "./vendors/scrolloverflow.min.js",
+                "./dist/jquery.fullpage.css"
             ],
             "dependencies": {
                 "jquery": "^3.1.1"
