@@ -7,7 +7,7 @@
 .experience .commandContainer {
     position: absolute;
     height: 100%;
-    width: 90%;
+    width: 100%;
     overflow-y: auto;
     overflow-x: hidden;
     color: #ffffff;
@@ -15,7 +15,6 @@
     cursor: pointer;
     background: #000;
     margin: auto;
-    left: 5%;
 }
 
 .experience .commandContainer .fore {
@@ -38,7 +37,7 @@
     text-align: center;
     padding-top: 5px;
     border-bottom: 2px solid #333;
-    width: 90%;
+    width: 100%;
     margin: auto;
 }
 
