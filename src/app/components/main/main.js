@@ -19,6 +19,7 @@ function Main($scope, $element, $document) {
     fitToSection: true,
     fitToSectionDelay: 0,
     verticalCentered: false,
+    responsiveWidth: 767,
     anchors: ["home", "about", "skills", "experience", "location", "contact"],
     afterLoad: function (anchorLink) {
     },

@@ -4,7 +4,7 @@
 
 .location #map {
     position: absolute;
-    height: 70%;
+    height: 100%;
     width: 90%;
     margin: auto;
     left: 5%;
@@ -12,4 +12,28 @@
 
 .location a[title='Interactive JavaScript maps'] {
     display: none !important;
+}
+
+@media only screen and (min-width: 768px) {
+    .location #map {
+        height: 52%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .location #map {
+        height: 55%;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+    .location #map {
+        height: 65%;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+    .location #map {
+        height: 70%;
+    }
 }

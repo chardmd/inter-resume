@@ -6,7 +6,7 @@
 
 .experience .commandContainer {
     position: absolute;
-    height: 70%;
+    height: 100%;
     width: 90%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -101,4 +101,28 @@
 
 .experience .loading {
     display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .experience .commandContainer {
+        height: 52%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .experience .commandContainer {
+        height: 55%;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+    .experience .commandContainer {
+        height: 65%;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+    .experience .commandContainer {
+        height: 70%;
+    }
 }

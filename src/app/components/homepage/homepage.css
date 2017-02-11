@@ -7,6 +7,8 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+        margin-right: -15px;
+    margin-left: -15px;
 }
 
 .homepage .homepage-wrapper {
