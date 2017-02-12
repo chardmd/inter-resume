@@ -49,7 +49,7 @@ function Skills($element, $scope, $http, $timeout) {
       for (var i = 0; i < words.length; i++) {
         loopAnimate(words, i);
       }
-    }, 1200);
+    }, 1000);
   }
 
   function shuffleArray(array) {
@@ -83,7 +83,7 @@ function Skills($element, $scope, $http, $timeout) {
       if (index === words.length - 1) {
         animateFinal();
       }
-    }, index * 100);
+    }, index * 80);
   }
 
   function animateFinal() {
