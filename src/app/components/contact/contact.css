@@ -2,21 +2,42 @@
     position: relative;
 }
 
-.contact .copyright {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+.contact .content {
+	text-align: center;
+	margin-top: 5%;
+	padding-bottom: 100px;
 }
 
-/*.contact .footer {
+.contact .content label {
+  font-size: 43px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #00aabb;
+  padding-bottom: 8px;
+}
+
+.contact .content .btn:focus {
+	outline: none;
+}
+
+.contact .content .row div {
+	float: none;
+    margin: auto;
+}
+
+.contact .footer {
 	position: absolute;
 	bottom: 0;
-	width: 100%;
 	height: 80px;
 	background-image: -webkit-linear-gradient(#000, #000);
 	text-align: center;
-  margin-left: -15px;
-  margin-right: -15px;
+	margin: 0 -15px;
+}
+
+.contact .footer .copyright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .contact .footer .note {
@@ -27,26 +48,5 @@
 
 .contact .footer .note a {
 	color: #fbc659;
-}*/
-
-.contact .content {
-	text-align: center;
-	margin-top: 5%;
 }
 
-.contact .content .row div {
-	float: none;
-    margin: auto;
-}
-
-.contact label {
-	font-size: 43px;
-  letter-spacing: 3px;
-  font-weight: bold;
-  color: #00aabb;
-  padding-bottom: 8px;
-}
-
-.contact .btn:focus {
-	outline: none;
-}
