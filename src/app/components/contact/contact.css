@@ -18,6 +18,7 @@
 
 .contact .content .btn:focus {
 	outline: none;
+	border-radius: 0;
 }
 
 .contact .content .row div {
