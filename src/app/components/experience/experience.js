@@ -27,6 +27,7 @@ function Experience($scope, $http, $element, $timeout) {
       startAnimation = false;
 
       $ctrl.startType = true;
+      $scope.$apply();
     }
 
         // set to view
