@@ -20,8 +20,9 @@ function Experience($scope, $http, $element, $timeout) {
   $ctrl.experienceList = [];
   $ctrl.logs = [];
 
+  var startAnimation = true;
+
   $scope.$on('experience', function () {
-    var startAnimation = true;
     if (startAnimation === true) {
             // run the animation only once
       startAnimation = false;
