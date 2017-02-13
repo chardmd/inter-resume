@@ -122,7 +122,7 @@
     }
 }
 
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 2560px) {
     .experience .commandContainer {
         height: 70%;
         position: absolute;
