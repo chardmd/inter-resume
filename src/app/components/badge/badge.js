@@ -44,31 +44,31 @@ function Badge($scope, $element, $document) {
 
       case ANCHORS.about:
 
-        title.innerHTML = "G'day mate, Nice meeting you.";
+        title.innerHTML = "Hey mate, It's nice to have you here.";
 
         break;
 
       case ANCHORS.skills:
 
-        title.innerHTML = 'Here are some of the tools that I used on my projects';
+        title.innerHTML = 'Here are some of the tools that I used on my projects.';
 
         break;
 
       case ANCHORS.experience:
 
-        title.innerHTML = 'More than five years experience in building enterprise web software';
+        title.innerHTML = 'More than five years experience in building enterprise web software.';
 
         break;
 
       case ANCHORS.location:
 
-        title.innerHTML = 'Australian Permanent Resident and currently based in Sydney, Australia';
+        title.innerHTML = 'Australian Permanent Resident and currently based in Sydney, Australia.';
 
         break;
 
       case ANCHORS.contact:
 
-        title.innerHTML = "Got an opportunity? Let's build cool and exciting projects! Just click the Green button.";
+        title.innerHTML = "Got an opportunity? Let's build cool and exciting projects! Just click the green button.";
 
         break;
 

@@ -1,3 +1,35 @@
 .about {
     position: relative;
 }
+
+
+.about .content {
+    text-align: center;
+    margin-top: 5%;
+    padding-bottom: 120px;
+}
+
+.about .content label {
+  font-size: 43px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #00aabb;
+  padding-bottom: 8px;
+}
+
+.about .content .btn:focus {
+	outline: none;
+	border-radius: 0;
+}
+
+.about .content .row div {
+	float: none;
+    margin: auto;
+}
+
+.about #particles-js {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}

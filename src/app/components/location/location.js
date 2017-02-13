@@ -101,7 +101,7 @@ function Location($scope, $window, $timeout, $element) {
         lineId: "line2",
         flipDirection: false,
         loop: false,
-        scale: 0.03,
+        scale: 0.080,
         positionScale: 1.3
       }]
     },
@@ -120,7 +120,7 @@ function Location($scope, $window, $timeout, $element) {
       rollOverColor: "#585869",
       selectedColor: "#585869",
       pauseDuration: 0.2,
-      animationDuration: 3.5,
+      animationDuration: 2.5,
       adjustAnimationSpeed: true
     },
 

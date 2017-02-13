@@ -55,17 +55,6 @@
     color: #fbc659;
 }
 
-.homepage .bounce {
-    position: absolute;
-    color: #ffffff;
-    cursor: pointer;
-    margin: auto;
-    left: 0;
-    bottom: 5%;
-    right: 0;
-    text-align: center;
-    opacity: 0.5;
-}
 
 .homepage .typer__cursor {
     -webkit-animation: blink 1s infinite;

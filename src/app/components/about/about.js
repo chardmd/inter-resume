@@ -6,8 +6,28 @@ angular
     });
 
 /** @ngInject */
-function About($scope) {
-  $scope.$on('about', function () {
+function About($scope, $http) {
+  $ctrl = this;
 
+  $ctrl.particleConfig = null;
+
+  var animateOnce = true;
+
+  $scope.$on('about', function () {
+  	if (animateOnce === true) {
+   		particlesJS("particles-js", $ctrl.particleConfig);
+    animateOnce = false;
+  	}
   });
+
+  $ctrl.$onInit = function () {
+    fetchParticleConfig();
+  };
+
+  function fetchParticleConfig() {
+    $http.get('app/components/about/particles.json')
+      .then(function (response) {
+        $ctrl.particleConfig = response.data;
+      });
+  }
 }

@@ -13,8 +13,8 @@
         <span class="default">
                         [{{$ctrl.currentDate | date: 'HH:mm:ss'}}]<span class="fore">&nbsp;richard</span>:<span class="accent">~</span>:
         </span>
-        <typer words="['load work-experience --global']" start-trigger="$ctrl.startType" start-typing="true" repeat="false" type-time="55" start-delay='
-                        1000' on-complete="$ctrl.displayCommand()"></typer>
+        <typer words="['load work-experience --global']" start-trigger="$ctrl.startType" start-typing="true" repeat="false" 
+        type-time="55" start-delay='700' on-complete="$ctrl.displayCommand()"></typer>
         <div class="command">
             <span>Run a task:</span>
             <div ng-repeat="exp in $ctrl.experienceList track by $index">
