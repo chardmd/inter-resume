@@ -21,6 +21,10 @@
 	border-radius: 0;
 }
 
+.contact .content .btn-lg {
+	border-radius: 0;
+}
+
 .contact .content .row div {
 	float: none;
     margin: auto;

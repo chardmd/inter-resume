@@ -68,7 +68,7 @@ function Badge($scope, $element, $document) {
 
       case ANCHORS.contact:
 
-        title.innerHTML = "Got an opportunity? Let's build cool and exciting projects! Just click the green button.";
+        title.innerHTML = "Interested in doing business together? Let's have a talk. I would love to hear from you.";
 
         break;
 
