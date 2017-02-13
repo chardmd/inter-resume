@@ -7,7 +7,7 @@ angular
 
 /** @ngInject */
 function About($scope, $http) {
-  $ctrl = this;
+  var $ctrl = this;
 
   $ctrl.particleConfig = null;
 
