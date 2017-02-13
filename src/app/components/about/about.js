@@ -13,16 +13,15 @@ function About($scope, $http) {
 
   var animateOnce = true;
 
+  // init
+  fetchParticleConfig();
+
   $scope.$on('about', function () {
   	if (animateOnce === true) {
    		particlesJS("particles-js", $ctrl.particleConfig);
     animateOnce = false;
   	}
   });
-
-  $ctrl.$onInit = function () {
-    fetchParticleConfig();
-  };
 
   function fetchParticleConfig() {
     $http.get('app/components/about/particles.json')
