@@ -11,11 +11,10 @@ function About($scope, $http) {
 
   $ctrl.particleConfig = null;
 
-  var animateOnce = true;
-
   // init
   fetchParticleConfig();
 
+  var animateOnce = true;
   $scope.$on('about', function () {
   	if (animateOnce === true) {
    		particlesJS("particles-js", $ctrl.particleConfig);
