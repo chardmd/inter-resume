@@ -24,11 +24,10 @@ function Experience($scope, $http, $element, $timeout) {
 
   $scope.$on('experience', function () {
     if (startAnimation === true) {
-            // run the animation only once
+      // run the animation only once
       startAnimation = false;
 
       $ctrl.startType = true;
-      $scope.$apply();
     }
 
         // set to view
