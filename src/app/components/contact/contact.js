@@ -12,7 +12,7 @@ function Contact($scope, $window) {
   var $ctrl = this;
 
   var emailId = "richard.dimalanta@gmail.com";
-  var subject = "I got an awesome opportunity waiting for you.";
+  var subject = "Let's work together and start creating awesome products.";
   var message = "Hi Richard.";
 
   $scope.$on('contact', function () {
