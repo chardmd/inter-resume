@@ -134,7 +134,7 @@ function Location($scope, $window, $timeout, $element, Analytics) {
   $element.find('#map').hide();
   $scope.$on('location', function () {
     // analytics trackpage
-    Analytics.trackPage('/location', 'Location');
+    Analytics.trackPage('/#location', 'Location');
     Analytics.pageView();
 
     if (angular.isUndefined($window.mapLocation)) {

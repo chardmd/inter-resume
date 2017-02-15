@@ -19,7 +19,7 @@ function About($scope, $http, Analytics) {
   var animateOnce = true;
   $scope.$on('about', function () {
     // analytics trackpage
-    Analytics.trackPage('/about', 'About');
+    Analytics.trackPage('/#about', 'About');
     Analytics.pageView();
 
     if (animateOnce === true) {
