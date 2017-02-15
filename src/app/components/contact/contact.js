@@ -17,7 +17,7 @@ function Contact($scope, $window, Analytics) {
 
   $scope.$on('contact', function () {
     // analytics trackpage
-    Analytics.trackPage('/contact');
+    Analytics.trackPage('/contact', 'Contact');
     Analytics.pageView();
   });
 

@@ -24,7 +24,7 @@ function Skills($element, $scope, $http, $timeout, Analytics) {
 
   $scope.$on('skills', function () {
     // analytics trackpage
-    Analytics.trackPage('/contact');
+    Analytics.trackPage('/skills', 'Skills');
     Analytics.pageView();
 
     if (animationTrigger === false) {

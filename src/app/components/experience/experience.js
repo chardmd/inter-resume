@@ -24,7 +24,7 @@ function Experience($scope, $http, $element, $timeout, Analytics) {
 
   $scope.$on('experience', function () {
         // analytics trackpage
-    Analytics.trackPage('/contact');
+    Analytics.trackPage('/experience', 'Experience');
     Analytics.pageView();
 
     if (startAnimation === true) {
