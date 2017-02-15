@@ -9,6 +9,11 @@ Badge.$inject = ['$scope', '$element', '$document'];
 
 /** @ngInject */
 function Badge($scope, $element, $document) {
+  var $ctrl = this;
+
+  // controller methods
+  $ctrl.hideSpeechBubble = hideSpeechBubble;
+
   $scope.$on('badgeListen', function (event, badge) {
     var isBadgeHidden = badge.isBadgeHidden;
     var nextIndex = badge.nextIndex;
@@ -25,6 +30,10 @@ function Badge($scope, $element, $document) {
 
     displaySpeechBubble(nextIndex);
   });
+
+  function hideSpeechBubble() {
+    $element.find('.speech-bubble').toggle();
+  }
 
   function displaySpeechBubble(nextIndex) {
     var ANCHORS = {
