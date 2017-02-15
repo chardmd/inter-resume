@@ -20,7 +20,7 @@ function Main($scope, $element, $document) {
     fitToSectionDelay: 0,
     verticalCentered: false,
     responsiveWidth: 767,
-    anchors: ["home", "about", "skills", "experience", "location", "contact"],
+    anchors: ["", "about", "skills", "experience", "location", "contact"],
     afterLoad: function (anchorLink) {
     },
     onLeave: function (index, nextIndex, direction) {
