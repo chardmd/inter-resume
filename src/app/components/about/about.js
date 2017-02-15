@@ -16,10 +16,10 @@ function About($scope, $http) {
 
   var animateOnce = true;
   $scope.$on('about', function () {
-  	if (animateOnce === true) {
-   		particlesJS("particles-js", $ctrl.particleConfig);
-    animateOnce = false;
-  	}
+    if (animateOnce === true) {
+      particlesJS("particles-js", $ctrl.particleConfig);
+      animateOnce = false;
+    }
   });
 
   function fetchParticleConfig() {
