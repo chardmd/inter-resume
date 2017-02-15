@@ -11,7 +11,8 @@
     "fullpage.js": "^2.8.6",
     "animate.css": "^3.5.2",
     "ammap": "^3.18.3",
-    "particles.js": "^2.0.0"
+    "particles.js": "^2.0.0",
+    "angular-google-analytics": "^1.1.9"
   },
   "overrides": {
     "bootstrap": {
