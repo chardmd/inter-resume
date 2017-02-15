@@ -2,10 +2,7 @@ angular
     .module('app')
     .component('experience', {
       templateUrl: 'app/components/experience/experience.html',
-      controller: Experience,
-      bindings: {
-        startType: '@startType'
-      }
+      controller: Experience
     });
 
 Experience.$inject = ['$scope', '$http', '$element', '$timeout'];
@@ -18,7 +15,7 @@ function Experience($scope, $http, $element, $timeout) {
   $ctrl.displayCommand = displayCommand;
 
     // controller variables
-  $ctrl.startType = false;
+  $scope.startType = false;
   $ctrl.currentDate = new Date();
   $ctrl.experienceList = [];
   $ctrl.logs = [];
@@ -30,7 +27,8 @@ function Experience($scope, $http, $element, $timeout) {
       // run the animation only once
       startAnimation = false;
 
-      $ctrl.startType = true;
+      $scope.startType = true;
+      $scope.$applyAsync();
     }
 
         // set to view
