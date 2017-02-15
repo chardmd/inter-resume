@@ -2,7 +2,10 @@ angular
     .module('app')
     .component('experience', {
       templateUrl: 'app/components/experience/experience.html',
-      controller: Experience
+      controller: Experience,
+      bindings: {
+        startType: '@startType'
+      }
     });
 
 Experience.$inject = ['$scope', '$http', '$element', '$timeout'];
