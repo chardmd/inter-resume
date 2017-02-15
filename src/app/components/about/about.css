@@ -6,7 +6,6 @@
 .about .content {
     text-align: center;
     margin-top: 5%;
-    padding-bottom: 120px;
 }
 
 .about .content label {
@@ -22,14 +21,27 @@
 	border-radius: 0;
 }
 
-.about .content .row div {
-	float: none;
-    margin: auto;
-}
-
 .about #particles-js {
     position: absolute;
     top: 0;
     height: 100%;
     width: 100%;
 }
+
+
+@media only screen and (max-width: 767px) {
+    .about .content .row div {
+      text-align: center;
+      width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .about .content .row div {
+      float: none;
+      margin: 0 auto;
+    }
+}
+
+
+

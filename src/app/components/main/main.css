@@ -2,14 +2,4 @@
     .about, .skills, .experience, .contact {
         height: auto !important;
     }
-
-    .section {
-    	padding-top: 0 !important;
-    	margin-right: -53px !important;
-    }
-
-    .homepage {
-    	margin-right: -68px !important;
-    	height: 830px !important;
-    }
 }
