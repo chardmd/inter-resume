@@ -5,10 +5,10 @@ angular
       controller: Contact
     });
 
-Contact.$inject = ['$scope', '$window'];
+Contact.$inject = ['$scope', '$window', 'Analytics'];
 
 /** @ngInject */
-function Contact($scope, $window) {
+function Contact($scope, $window, Analytics) {
   var $ctrl = this;
 
   var emailId = "richard.dimalanta@gmail.com";
@@ -16,10 +16,15 @@ function Contact($scope, $window) {
   var message = "Hi Richard.";
 
   $scope.$on('contact', function () {
-
+    // analytics trackpage
+    Analytics.trackPage('/contact');
+    Analytics.pageView();
   });
 
   $ctrl.sendMail = function () {
     $window.open("mailto:" + emailId + "?subject=" + subject + "&body=" + message, "_self");
+
+    Analytics.trackEvent('contact', 'click', 'email_me_button');
+    Analytics.pageView();
   };
 }

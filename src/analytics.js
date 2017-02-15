@@ -8,7 +8,8 @@ function AnalyticsConfig(AnalyticsProvider) {
    // Add configuration code as desired
   AnalyticsProvider
   .setAccount('UA-92024229-1')
-  .logAllCalls(true);
+  .logAllCalls(true)
+  .useDisplayFeatures(true);
 }
 
 /** @ngInject */

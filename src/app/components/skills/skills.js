@@ -5,10 +5,10 @@ angular
       controller: Skills
     });
 
-Skills.$inject = ['$element', '$scope', '$http', '$timeout'];
+Skills.$inject = ['$element', '$scope', '$http', '$timeout', 'Analytics'];
 
 /** @ngInject */
-function Skills($element, $scope, $http, $timeout) {
+function Skills($element, $scope, $http, $timeout, Analytics) {
   var $ctrl = this;
 
     // controller variables
@@ -23,6 +23,10 @@ function Skills($element, $scope, $http, $timeout) {
   var animationTrigger = false;
 
   $scope.$on('skills', function () {
+    // analytics trackpage
+    Analytics.trackPage('/contact');
+    Analytics.pageView();
+
     if (animationTrigger === false) {
       animationTrigger = true;
 

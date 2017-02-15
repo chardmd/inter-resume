@@ -5,8 +5,10 @@ angular
       controller: About
     });
 
+About.$inject = ['$scope', '$http', 'Analytics'];
+
 /** @ngInject */
-function About($scope, $http) {
+function About($scope, $http, Analytics) {
   var $ctrl = this;
 
   $ctrl.particleConfig = null;
@@ -16,6 +18,10 @@ function About($scope, $http) {
 
   var animateOnce = true;
   $scope.$on('about', function () {
+    // analytics trackpage
+    Analytics.trackPage('/contact');
+    Analytics.pageView();
+
     if (animateOnce === true) {
       particlesJS("particles-js", $ctrl.particleConfig);
       animateOnce = false;

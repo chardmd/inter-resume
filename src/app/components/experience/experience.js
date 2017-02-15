@@ -5,10 +5,10 @@ angular
       controller: Experience
     });
 
-Experience.$inject = ['$scope', '$http', '$element', '$timeout'];
+Experience.$inject = ['$scope', '$http', '$element', '$timeout', 'Analytics'];
 
 /** @ngInject */
-function Experience($scope, $http, $element, $timeout) {
+function Experience($scope, $http, $element, $timeout, Analytics) {
   var $ctrl = this;
 
     // controller methods
@@ -23,6 +23,10 @@ function Experience($scope, $http, $element, $timeout) {
   var startAnimation = true;
 
   $scope.$on('experience', function () {
+        // analytics trackpage
+    Analytics.trackPage('/contact');
+    Analytics.pageView();
+
     if (startAnimation === true) {
       // run the animation only once
       startAnimation = false;
