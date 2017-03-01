@@ -9,7 +9,7 @@
 }
 
 .about .content label {
-  font-size: 43px;
+  font-size: 3em;
   letter-spacing: 3px;
   font-weight: bold;
   color: #00aabb;
@@ -34,12 +34,27 @@
       text-align: center;
       width: 100%;
     }
+
+    .about .content label {
+        font-size: 2.7em;
+    }
 }
 
 @media only screen and (min-width: 768px) {
     .about .content .row div {
       float: none;
       margin: 0 auto;
+    }
+
+    .about .content label {
+        font-size: 3.2em;
+    }
+}
+
+@media only screen and (min-width: 1383px) {
+    .about .content label {
+        font-size: 3.5em;
+        line-height: 80px;
     }
 }
 

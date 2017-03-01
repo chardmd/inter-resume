@@ -19,9 +19,9 @@
 
 .homepage p {
     color: #ffffff;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 900;
-    line-height: 89px;
+    line-height: 55px;
     letter-spacing: 3px;
     text-shadow: 1px 1px 1px #000;
 }
@@ -34,7 +34,7 @@
     position: absolute;
     margin: auto;
     left: 0;
-    top: 20%;
+    top: 15%;
     right: 0;
     text-align: center;
 }
@@ -112,3 +112,17 @@
     }
 
 }
+
+@media only screen and (min-width: 1140px) {
+    .homepage p {
+        font-size: 3.7em;
+        line-height: 60px;
+    }
+
+    .homepage .typer {
+        color: #fbc659;
+        width: 161px;
+    }
+
+}
+
