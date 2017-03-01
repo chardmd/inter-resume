@@ -4,8 +4,12 @@
     font-size: 12pt;
 }
 
+.experience .slidePage {
+    height: 100%;
+}
+
 .experience .commandContainer {
-    height: 550px;
+    height: 95%;
     width: 100%;
     overflow-y: auto;
     overflow-x: hidden;
