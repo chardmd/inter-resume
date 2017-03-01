@@ -17,3 +17,9 @@
     background-image: -webkit-linear-gradient(#fbc659, #fbc659);
     background-image: linear-gradient(#fbc659, #fbc659);
 }
+
+@media only screen and (min-width: 1383px) {
+    .slideTitle .pageLabel  {
+        font-size: 3.3em;
+    }
+}

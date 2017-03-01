@@ -100,31 +100,3 @@
 .experience .loading {
     display: none;
 }
-
-@media only screen and (min-width: 768px) {
-    .experience .commandContainer {
-        height: 58%;
-        position: absolute;
-    }
-}
-
-@media only screen and (min-width: 1024px) {
-    .experience .commandContainer {
-        height: 55%;
-        position: absolute;
-    }
-}
-
-@media only screen and (min-width: 1140px) {
-    .experience .commandContainer {
-        height: 65%;
-        position: absolute;
-    }
-}
-
-@media only screen and (min-width: 2560px) {
-    .experience .commandContainer {
-        height: 70%;
-        position: absolute;
-    }
-}

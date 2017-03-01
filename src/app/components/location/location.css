@@ -21,27 +21,3 @@
     height: 100%;
     z-index: 10000;
 }
-
-@media only screen and (min-width: 768px) {
-    .location #map {
-        height: 52%;
-    }
-}
-
-@media only screen and (min-width: 1024px) {
-    .location #map {
-        height: 55%;
-    }
-}
-
-@media only screen and (min-width: 1140px) {
-    .location #map {
-        height: 65%;
-    }
-}
-
-@media only screen and (min-width: 2560px) {
-    .location #map {
-        height: 70%;
-    }
-}

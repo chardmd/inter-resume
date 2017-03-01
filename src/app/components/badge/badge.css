@@ -9,6 +9,7 @@
     width: 200px;
     text-align: right;
     cursor: pointer;
+    opacity: 0.9;
 }
 
 .badgeComponent .speech-bubble {
@@ -17,7 +18,8 @@
     text-align: center;
     color: white;
     text-shadow: 0 -0.05em 0.1em rgba(0, 0, 0, .3);
-    height: 116px;
+    height: 125px;
+    width: 215px;
     margin-bottom: 20px;
 }
 
@@ -26,6 +28,7 @@
     position: absolute;
     margin: 0px 10px;
     font-weight: bold;
+    font-size: 18px;
     top: 50%;
     transform: translateY(-50%);
 }

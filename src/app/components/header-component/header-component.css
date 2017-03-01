@@ -12,6 +12,7 @@
 
 .navHeader .navbar-default .navbar-nav>li>a {
     color: #00aabb;
+    font-size: 18px;
 }
 
 .navHeader .navbar-default .navbar-nav>li>a:focus,
