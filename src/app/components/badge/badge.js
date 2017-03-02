@@ -53,19 +53,19 @@ function Badge($scope, $element, $document) {
 
       case ANCHORS.about:
 
-        title.innerHTML = "Hey mate, It's great to have you here!";
+        title.innerHTML = "Oh Hello there, It's great to have you here!";
 
         break;
 
       case ANCHORS.skills:
 
-        title.innerHTML = 'Can easily learn new frameworks, and concepts rapidly to meet the demands of business and clients.';
+        title.innerHTML = 'Can easily learn new tools, and concepts rapidly to meet the demands of business and clients.';
 
         break;
 
       case ANCHORS.experience:
 
-        title.innerHTML = 'More than five years experience in building enterprise software applications.';
+        title.innerHTML = 'With over five years of experience in building enterprise software applications.';
 
         break;
 
@@ -77,7 +77,7 @@ function Badge($scope, $element, $document) {
 
       case ANCHORS.contact:
 
-        title.innerHTML = "Interested in doing business together? Let's have a talk. I would love to hear from you.";
+        title.innerHTML = "Are you interested in doing business together? Let's have a talk. I would love to hear from you.";
 
         break;
 

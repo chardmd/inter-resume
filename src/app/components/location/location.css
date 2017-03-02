@@ -1,6 +1,5 @@
 .location {
     position: relative;
-    z-index: 10000;
 }
 
 .location .slidePage {
@@ -19,10 +18,11 @@
     display: none !important;
 }
 
-.location .cover {
-    position: relative;
+.location #cover {
+    position: absolute;
     width: 100%;
-    height: 100%;
+    height: 80%;
+    z-index: 9999999;
 }
 
 @media only screen and (max-width: 1024px) {

@@ -12,8 +12,8 @@ function Contact($scope, $window, Analytics) {
   var $ctrl = this;
 
   var emailId = "richard.dimalanta@gmail.com";
-  var subject = "Let's work together and build software that has business value.";
-  var message = "Hi Richard.";
+  var subject = "Hi Richard, Let's work together.";
+  var message = "";
 
   $scope.$on('contact', function () {
     // analytics trackpage
