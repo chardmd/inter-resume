@@ -1,6 +1,6 @@
 .footer {
  	bottom: 0;
-    height: 100px;
+    height: 150px;
     background-color: #252c2d;
     text-align: center;
     margin: 0 -15px;
@@ -8,7 +8,7 @@
 
 .footer .note {
     color: #ffffff;
-    margin-top: 30px;
+    margin-top: 50px;
     font-size: 16px;
 }
 
