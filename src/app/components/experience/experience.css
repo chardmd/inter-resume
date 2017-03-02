@@ -9,7 +9,7 @@
 }
 
 .experience .commandContainer {
-    height: 95%;
+    height: 70%;
     width: 100%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -103,4 +103,10 @@
 
 .experience .loading {
     display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .experience .commandContainer {
+        height: 550px;
+    }
 }

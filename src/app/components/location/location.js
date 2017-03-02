@@ -131,7 +131,6 @@ function Location($scope, $window, $timeout, $element, Analytics) {
 
   };
 
-  $element.find('#map').hide();
   $scope.$on('location', function () {
     // analytics trackpage
     Analytics.trackPage('/#location', 'Location');
@@ -139,7 +138,7 @@ function Location($scope, $window, $timeout, $element, Analytics) {
 
     if (angular.isUndefined($window.mapLocation)) {
       $window.mapLocation = AmCharts.makeChart("map", mapSettings);
-      $element.find('#map').fadeIn(500);
+      $element.find('#map').fadeIn(300);
     }
   });
 }

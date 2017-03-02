@@ -2,9 +2,12 @@
     position: relative;
 }
 
-.location #map {
-    position: absolute;
+.location .slidePage {
     height: 100%;
+}
+
+.location #map {
+    height: 80%;
     width: 100%;
     margin: auto;
     z-index: 10;
@@ -18,6 +21,11 @@
 .location .cover {
     position: absolute;
     width: 100%;
-    height: 100%;
     z-index: 10000;
+}
+
+@media only screen and (max-width: 1024px) {
+    .location #map {
+        height: 550px !important;
+    }
 }

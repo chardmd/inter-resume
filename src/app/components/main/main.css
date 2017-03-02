@@ -1,10 +1,6 @@
 @media only screen and (max-width: 1025px) {
-    .about, .skills, .experience, .contact {
+    .about, .skills, .experience, .location, .contact {
         height: auto !important;
     	padding-top: 0px !important;
-    }
-
-    .slideTitle {
-    	margin-top: 10px !important;
     }
 }

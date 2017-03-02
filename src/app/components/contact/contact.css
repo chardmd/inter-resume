@@ -5,7 +5,7 @@
 .contact .content {
     text-align: center;
     margin-top: 5%;
-    padding-bottom: 120px;
+    padding-bottom: 130px;
 }
 
 .contact .content label {
@@ -27,31 +27,7 @@
 
 .contact .content .row div {
 	float: none;
-    margin: auto;
-}
-
-.contact .footer {
-	bottom: 0;
-	height: 100px;
-	background-color: #252c2d;
-	text-align: center;
-	margin: 0 -15px;
-}
-
-.contact .footer .copyright {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-.contact .footer .note {
-	color: #ffffff;
-	margin-top: 30px;
-	font-size: 14px;
-}
-
-.contact .footer .note a {
-	color: #fbc659;
+  margin: auto;
 }
 
 @media only screen and (max-width: 767px) {
