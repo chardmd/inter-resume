@@ -83,3 +83,26 @@
         display: none !important;
     }
 }
+
+@media only screen and (min-width: 1240px) {
+
+    .badgeComponent .bouncing-badge {
+        right: 46px;
+    }
+
+    .badgeComponent .bouncing-badge .speech-bubble {
+        height: 10em;
+        width: 16em;
+        margin-bottom: 17px;
+        right: 2.5em;
+    }
+
+    .badgeComponent .bouncing-badge img {
+        width: 120px;
+    }
+
+    .badgeComponent .bouncing-badge h4 {
+        font-size: 20px;
+    }
+
+}

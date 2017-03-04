@@ -53,7 +53,7 @@ function Badge($scope, $element, $document) {
 
       case ANCHORS.about:
 
-        title.innerHTML = "Oh Hello there, It's great to have you here!";
+        title.innerHTML = "Oh hello there, It's great to have you here!";
 
         break;
 
