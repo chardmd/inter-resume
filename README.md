@@ -1,2 +1,2 @@
 # inter-resume
-💼  http://chardmd.com - Fun and animated resume
+💼  Fun and animated resume
